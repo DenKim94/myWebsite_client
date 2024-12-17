@@ -1,0 +1,10 @@
+@import url('index.css');
+
+#about-title{
+    display: flex;
+    flex-direction: row;
+    max-height: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}

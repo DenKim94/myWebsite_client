@@ -1,0 +1,182 @@
+@import url('index.css');
+
+.education-content {
+    display: flex;
+    flex-direction: column;
+    max-height: calc((90vh - var(--minHeightSectionsOffset, 50px))*0.9); 
+    min-width: calc(var(--minAppWidth)*0.9);
+    height: 100%; 
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    overflow-y: auto;
+}
+
+.education-list {
+    font-size: 0.9rem;
+    font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 0;
+    max-width: calc(var(--maxWidthSections)*0.8);
+    min-width: calc(var(--minAppWidth)*0.8);
+    width: 90%;
+    height: 100%;
+}
+
+.education-items {
+    width: 66%;
+    text-align: left;
+}
+
+#education-title {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#education-location {
+    margin-top: 0;
+    margin-bottom: 0;
+} 
+
+#education-time-period {
+    width: 33%;
+    text-align: left;
+    margin-top: 0;
+}
+
+#education-description {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    min-height: 200px;
+    max-height: 280px;
+    margin-bottom: 0;
+    max-width: calc(var(--maxWidthSections)*0.8);
+    min-width: calc(var(--minAppWidth)*0.8);
+    width: 90%;
+    flex-shrink: 0;
+    flex-grow: 1;
+    height: auto;
+    overflow-y: auto;
+}
+
+/* Mobile view: laptop */
+@media(max-width: 1930px) and (max-height: 1120px){
+    #education-description{
+        text-align: justify;
+        margin-bottom: 20px;
+    }
+
+    .education-content {
+        max-height: calc((90vh - var(--minHeightSectionsOffset, 50px))*0.86); 
+    }
+}
+
+/* Mobile view: tablet */
+@media(max-width: 1030px) and (max-height: 1370px){
+    #education-description  {
+        max-height: 450px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .education-content {
+        max-height: calc((90vh - var(--minHeightSectionsOffset, 50px))*0.86); 
+    }
+}
+
+@media(max-width: 1000px) and (max-height: 1200px){
+    #personal-description{
+        margin-left: 15px;
+        padding-right: 0;
+        height: calc((90vh - var(--minHeightSectionsOffset, 50px))*0.51); 
+    }
+    .personal-content {
+        height: calc((90vh - var(--minHeightSectionsOffset, 50px))*0.86); 
+    }
+}
+
+/* Mobile view: tablet (horizontal) */
+@media(max-width: 1370px) and (max-height: 1030px){
+    #education-description  {
+        margin-bottom: 20px;
+    }
+
+    .education-content {
+        max-height: calc((90vh - var(--minHeightSectionsOffset, 50px))*0.9); 
+        min-height: calc((90vh - var(--minHeightSectionsOffset, 50px))*0.85); 
+    }
+}
+
+
+/* Mobile view: smartphone */
+@media screen and (max-width: 440px) and (max-height: 940px){
+    #education-description  {
+        margin-bottom: 20px;
+        text-align: center;
+        justify-content: flex-start;
+        max-height: 350px;
+        min-width: calc(var(--minAppWidth)*0.6);
+        max-width: calc(var(--maxWidthSections)*0.9);
+        width: 92%;
+        margin-top: 0;
+        padding-left: 10px;
+        padding-right: 0;
+    }
+
+    .education-content {
+        min-width: calc(var(--minAppWidth)*0.6);
+        max-width: calc(var(--maxWidthSections)*0.8);
+        width: 100%;
+        min-height: calc(var(--minHeightSections)*0.65); 
+        max-height: calc((90vh - var(--minHeightSectionsOffset, 50px))*0.82); 
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .education-list {
+        min-width: 200px;
+        max-width: 400px;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .education-items {
+        width: 92%;
+    }
+
+    #education-time-period {
+        width: 92%;
+        margin-bottom: 0;
+    }
+}
+
+/* Mobile view: smartphone (horizontal) */
+@media screen and (max-width: 940px) and (max-height: 440px){
+    .education-content {
+        min-width: calc(var(--minAppWidth)*0.6);
+        max-width: calc(var(--maxWidthSections)*0.8);
+        width: 100%;
+        min-height: calc(var(--minHeightSections)*0.8); 
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+
+@media(min-height: 1300px){
+    .education-list {
+        font-size: large;
+    }
+}

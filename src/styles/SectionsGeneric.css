@@ -1,0 +1,19 @@
+@import url('index.css');
+
+.start-section, .about-section, .portfolio-section {
+    min-height: calc(var(--minHeightSections) + var(--minHeightSectionsOffset));
+    height: calc(100vh - var(--padding-topAbsValue, 40px));
+}
+
+.contact-section{
+    min-height: calc(var(--minHeightSections) + var(--minHeightSectionsOffset));
+    height: calc(100vh - calc(var(--padding-topAbsValue, 40px)*2));
+}
+
+/* Mobile view: smartphone */
+@media screen and (max-width: 440px) and (max-height: 940px){
+    .start-section, .about-section, .portfolio-section {
+        min-height: var(--minHeightSections);
+        height: 100vh;
+    }
+}

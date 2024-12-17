@@ -1,0 +1,70 @@
+@import url('index.css');
+
+.switcher-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.image-switch-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-width: var(--photoFrameSize);
+    min-height: var(--photoFrameSize);
+    width: var(--photoFrameSize); 
+    height: var(--photoFrameSize);
+    border-radius: 10px; 
+    border: var(--border-width, 5px) solid var(--border-color, black);
+    overflow: hidden;
+}
+
+.image-slider {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.current-image {
+    min-width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover; /* Passt das Bild an den Container an */
+    background-position: center; /* Zentriert das Bild */
+    background-color: black;
+    background-repeat: no-repeat;
+}
+
+.button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.switcher-button{
+    height: 100%;
+    min-width: 40px;
+    width: 80px;
+    background-color: #2a282b;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.switcher-button:hover {
+    box-shadow: 1px 1px 15px rgb(200, 199, 199, 0.5);
+}
+
+.switcher-button:active {
+    transform: scale(0.95);
+}

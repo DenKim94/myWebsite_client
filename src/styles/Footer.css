@@ -1,0 +1,38 @@
+@import url('index.css');
+
+footer {
+    background-color: #000; /* Schwarzer Hintergrund */
+    color: #fff; /* Weißer Text */
+    justify-content: space-between;
+    z-index: 9999;
+    display: flex;
+    flex-direction: row;  
+    width: 100%; /* Setzt die Breite des Footers auf 100% */
+    height: var(--padding-topAbsValue);
+    align-items: center;
+}
+
+#impressum {
+    margin-left: var(--marginLeft-Logo);
+    color: white;
+    text-decoration: none;
+    font-weight: 500; 
+}
+
+#copyright {
+    margin-right: var(--marginRight-Footer);
+}
+
+/* Mobile view: smartphone */
+@media screen and (max-width: 440px) and (max-height: 940px){
+    #impressum{
+        margin-left: calc(var(--marginLeft-Logo)*0.5);
+        font-weight: 300; 
+        font-size: medium; 
+    }
+    #copyright{
+        margin-right: calc(var(--marginRight-Footer)*0.5);
+        font-weight: 300;
+        font-size: medium; 
+    }
+}

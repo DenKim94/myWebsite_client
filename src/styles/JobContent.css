@@ -1,0 +1,181 @@
+@import url('index.css');
+
+.job-content {
+    display: flex;
+    flex-direction: column;
+    max-height: calc((90vh - var(--minHeightSectionsOffset, 50px))*0.9); 
+    min-width: calc(var(--minAppWidth)*0.9);
+    height: 100%; 
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    overflow-y: auto;
+}
+
+.job-list {
+    font-size: 0.9rem;
+    font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 0;
+    max-width: calc(var(--maxWidthSections)*0.8);
+    min-width: calc(var(--minAppWidth)*0.8);
+    width: 90%;
+    height: 100%;
+}
+
+.job-items {
+    width: 66%;
+    text-align: left;
+}
+
+#job-title {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#job-location {
+    margin-top: 0;
+    margin-bottom: 0;
+} 
+
+#job-time-period {
+    width: 33%;
+    text-align: left;
+    margin-top: 0;
+}
+
+#job-description {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    min-height: 200px;
+    max-height: 280px;
+    margin-bottom: 0;
+    max-width: calc(var(--maxWidthSections)*0.8);
+    min-width: calc(var(--minAppWidth)*0.8);
+    width: 90%;
+    flex-shrink: 0;
+    flex-grow: 1;
+    height: auto;
+    overflow-y: auto;
+}
+
+#company-name {
+    text-decoration: none;
+    color: white; 
+}
+
+#company-name:hover {
+    text-decoration: underline;
+}
+
+
+/* Mobile view: laptop */
+@media(max-width: 1930px) and (max-height: 1120px){
+    #job-description{
+        text-align: justify;
+        margin-bottom: 20px;
+    }
+
+    .job-content {
+        max-height: calc((90vh - var(--minHeightSectionsOffset, 50px))*0.80); 
+    }
+}
+
+/* Mobile view: tablet */
+@media(max-width: 1030px) and (max-height: 1370px){
+    #job-description  {
+        max-height: 450px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .job-content {
+        max-height: calc((90vh - var(--minHeightSectionsOffset, 50px))*0.86); 
+    }
+}
+
+
+/* Mobile view: tablet (horizontal) */
+@media(max-width: 1370px) and (max-height: 1030px){
+    #job-description  {
+        margin-bottom: 20px;
+    }
+
+    .job-content {
+        max-height: calc((90vh - var(--minHeightSectionsOffset, 50px))*0.82); 
+    }
+}
+
+
+/* Mobile view: smartphone */
+@media screen and (max-width: 440px) and (max-height: 940px){
+    #job-description  {
+        margin-bottom: 20px;
+        text-align: center;
+        justify-content: flex-start;
+        max-height: 350px;
+        min-width: calc(var(--minAppWidth)*0.6);
+        max-width: calc(var(--maxWidthSections)*0.9);
+        width: 92%;
+        margin-top: 0;
+        padding-left: 10px;
+        padding-right: 0;
+    }
+
+    .job-content {
+        min-width: calc(var(--minAppWidth)*0.6);
+        max-width: calc(var(--maxWidthSections)*0.8);
+        width: 100%;
+        min-height: calc(var(--minHeightSections)*0.68); 
+        max-height: calc((90vh - var(--minHeightSectionsOffset, 50px))*0.84); 
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .job-list {
+        min-width: 200px;
+        max-width: 400px;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .job-items {
+        width: 92%;
+    }
+
+    #job-time-period {
+        width: 92%;
+        margin-bottom: 0;
+    }
+}
+
+/* Mobile view: smartphone (horizontal) */
+@media screen and (max-width: 940px) and (max-height: 440px){
+    .job-content {
+        min-width: calc(var(--minAppWidth)*0.6);
+        max-width: calc(var(--maxWidthSections)*0.8);
+        width: 100%;
+        min-height: calc(var(--minHeightSections)*0.8); 
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+
+@media(min-height: 1300px){
+    .job-list {
+        font-size: large;
+    }
+}

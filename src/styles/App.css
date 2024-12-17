@@ -1,0 +1,24 @@
+@import url('index.css');
+
+#root {
+  width: 100%;
+  min-width: var(--minAppWidth);
+  margin: 0 auto;
+  text-align: center;
+  height: 100vh;
+}
+
+.app-container {
+  height: 100%;
+}
+
+.main-content {
+  padding-top: var(--padding-topAbsValue);
+  width: calc(100% - var(--padding-relValue));
+  min-width: var(--minAppWidth);
+  max-width: min(calc(100% - var(--padding-relValue)), var( --maxWidthSections));
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+

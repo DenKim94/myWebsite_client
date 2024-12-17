@@ -1,0 +1,98 @@
+@import url('index.css');
+
+.portfolio-content-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.project-cards-container{
+    display: block; 
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    min-width: var(--minAppWidth);
+    height: calc(var(--minHeightProjectCard)*var(--numberVisibleProjectCards));
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.general-project-description{
+    overflow-y: auto;
+    font-size: 1.1rem;
+    text-align: center;
+    max-height: 240px;
+    height: 90%;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+#portfolio-title{
+    display: flex;
+    flex-direction: row;
+    max-height: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+/* Mobile view: laptop */
+@media(max-width: 1930px) and (max-height: 1120px){
+    .project-cards-container{
+        height: calc(var(--minHeightProjectCard)*1.1*var(--numberVisibleProjectCards));
+    }
+}
+
+/* Mobile view: tablet */
+@media(max-width: 1030px) and (max-height: 1370px){
+    .project-cards-container{
+        height: calc(var(--minHeightProjectCard)*1.1*var(--numberVisibleProjectCards));
+    }
+
+    .general-project-description{
+        max-height: 320px;
+    }
+}
+
+/* Mobile view: tablet (horizontal) */
+@media(max-width: 1370px) and (max-height: 1030px){
+    .project-cards-container{
+        height: calc(var(--minHeightProjectCard)*var(--numberVisibleProjectCards));
+    }
+}
+
+/* Mobile view: smartphone */
+@media screen and (max-width: 440px) and (max-height: 940px){
+    .project-cards-container{
+        width: var(--minAppWidth);
+        height: var(--minHeightCardContainer);
+        padding-top: 5px;
+        padding-bottom: 5px;
+        gap: 5px;
+    }
+
+    .general-project-description{
+        font-size: medium;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 5px;
+        padding: 5px;
+        max-height: 280px;
+    }
+
+    #portfolio-title{
+        margin-bottom: 20px;
+    }
+}
+
+/* Mobile view: smartphone (horizontal) */
+@media screen and (max-width: 940px) and (max-height: 440px){
+    .project-cards-container{
+        height: calc(var(--minHeightCardContainer)*1.2);
+    }
+
+    #portfolio-title{
+        margin-bottom: 10px;
+    }
+}

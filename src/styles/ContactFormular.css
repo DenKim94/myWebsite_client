@@ -1,0 +1,71 @@
+@import url('index.css');
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    min-width: var(--minAppWidth);
+    align-items: center;
+    font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+    justify-content: flex-start;
+    gap: 20px;
+    position: relative;
+    max-width: calc(var(--maxWidthSections)*0.9);
+    min-height: calc(var(--minHeightSections)*0.8);
+    min-width: calc(var(--minAppWidth)*0.9);
+    max-height: var(--minHeightSections);
+    width: 70%;
+    margin-top: 10px;
+}
+
+.form-label{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    min-width: 70%;
+    max-width: var(--maxWidthContactForm);
+    width: 100%;
+}
+
+.form-label input{
+    font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+    color: black;
+    border: 1px solid  rgba(0, 0, 0, 0.85);
+    border-radius: 3px;
+    background-color: white;
+    min-height: 25px;
+    max-height: 35px;
+    height: 30px;
+}
+
+.message-container{
+    display: flex;
+    flex-direction: column;
+    min-width: 70%;
+    max-width: var(--maxWidthContactForm);
+    width: 100%;
+} 
+
+.message-label{
+    text-align: left;
+    font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+}
+
+.message-container textarea{
+    text-align: left;
+    font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+    color: black;
+    border: 1px solid  rgba(0, 0, 0, 0.85);
+    border-radius: 3px;
+    background-color: white;
+    resize: none; 
+    min-height: 130px;
+    max-height: 230px;
+    min-width: 70%;
+    width: 99%;
+}
+
+#send-button:hover{
+    background-image: linear-gradient(to bottom right, #6157FF, #a927b5);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
