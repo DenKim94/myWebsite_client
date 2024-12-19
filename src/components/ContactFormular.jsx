@@ -57,7 +57,7 @@ const ContactFormular = () => {
 
 
             {/* Datenschutzbestimmungen */}
-            <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
+            <div className='data-privacy-container' style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
                 <input 
                     type="checkbox" 
                     className="checkbox-data-privacy" 

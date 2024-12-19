@@ -69,3 +69,17 @@
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 }
 
+.data-privacy-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 20px;
+}
+
+/* Mobile view: smartphone */
+@media screen and (max-width: 440px) and (max-height: 940px){
+    .checkbox-data-privacy{
+        margin-top: 0;
+    }
+}

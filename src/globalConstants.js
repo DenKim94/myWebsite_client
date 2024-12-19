@@ -47,7 +47,7 @@ export const MAX_NUM_VISIBLE_CARDS = 3;
 
 export const PROJECT_NAME_STRATEGO = 'Stratego-Web';
 export const PROJECT_NAME_ECA = 'Enery Costs Analyzer'; 
-export const PROJECT_NAME_WEBSITE = 'Portfolio Website';
+export const PROJECT_NAME_WEBSITE = 'Portfolio Webseite';
 
 // Texte für die spezifische Beschreibung der aufgelisteten Projekte
 export const PROJECT_DESCRIPTION_STRATEGO = [`Beschreibung: 
@@ -242,7 +242,7 @@ Unsere Reise führte uns zunächst zu einem kleinen Kurort namens Bad Bederkesa.
 Der Gedanke an ein neues Leben in einem fremden Land weit weg vom Rest der Familie erfüllte mich einerseits mit Angst, andererseits aber auch mit Aufregung und Neugier. 
 Ich setzte meine Schullaufbahn mit überschaubaren Deutschkenntnissen fort und begann meine akademische Reise an einer Hauptschule.
 Die anfänglichen Herausforderungen waren deutlich spürbar, doch mein Ehrgeiz trieb mich voran.
-Ich arbeitete fleißig daran, die Sprache zu erlernen und mich an die neue Umgebung und Kultur anzupassen. 
+Ich arbeitete fleißig daran, die Sprache zu erlernen und mich an die neue Umgebung und Kultur zu gewöhnen. 
 Schließlich schloss ich im Jahr 2014 meine Schulausbildung mit dem Abitur ab.
 
 Ohne einer klaren Vorstellung von meiner Zukunft zog ich für mein Studium nach Hannover.
@@ -251,14 +251,14 @@ Der Beginn meines Ingenieursstudiums erwies sich jedoch turbulenter als erwartet
 Die Prüfungen waren herausfordernder, als ich es mir vorgestellt hatte, was zu mehr Tiefen als Höhen führte. Aber ich ließ mich nicht entmutigen.
 Diese schwierige Zeit zwang mich, mich selbst zu reflektieren, Entscheidungen zu treffen und meine Komfortzone zu verlassen. 
 Ich nutzte diese Phase, um mich persönlich und fachlich weiterzuentwickeln. 
-Schließlich schloss ich das Studium erfolgreich mit dem Masterabschluss ab.
+Letztendlich schloss ich das Studium erfolgreich mit dem Masterabschluss ab.
 
 Während meines Studiums hatte ich die Möglichkeit, in verschiedenen Bereichen zu arbeiten und wertvolle Erfahrungen zu sammeln.
 Ich begann als Kellner und Aufbauhelfer bei Großveranstaltungen, arbeitete als Promoter für den Naturschutzbund, war Fließbandarbeiter bei einem renommierten Automobilhersteller, 
 unterstütze als studentische Hilfskraft in der Forschung oder war als Werkstudent im Bereich der Testautomatisierung tätig.
 
 Rückblickend bin ich sehr dankbar für diese Erfahrungen, die mich geprägt und meinen Blick auf die Welt erweitert haben.
-Heute bin ich stolz darauf, mich Ingenieur nennen zu dürfen, der danach strebt den Alltag der Menschen mit zuverlässiger und intuitiver Software zu vereinfachen. 
+Heute bin ich stolz darauf, mich Ingenieur nennen zu dürfen, der danach strebt den Alltag der Menschen mit zuverlässiger und intuitiver Software zu erleichtern. 
 Jeder Schritt, den ich gegangen bin, hat mich geformt und mich auf dieser spannenden Reise zu dem fleißigen, organisierten und zuverlässigen Menschen gemacht, der ich heute bin.
 Ich blicke optimistisch in die Zukunft, bereit, neue Herausforderungen anzunehmen und weiterhin zu wachsen.`;
 

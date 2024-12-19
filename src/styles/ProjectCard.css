@@ -207,5 +207,40 @@
     .project-card-title{
         display: none;
     }
+}
 
+/* Mobile view: smartphone (horizontal) */
+@media screen and (max-width: 940px) and (max-height: 440px){
+    .project-card{
+        min-height: calc(var(--minHeightProjectCard, 50px)*0.75);
+    }
+}
+/* Mobile view: smartphone (mini) */
+@media screen and (max-width: 380px) and (max-height: 780px){
+    .project-reference{
+        padding: 0;
+        margin: 0;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+}
+
+/* Mobile view: smartphone (mini): horizontal */
+@media screen and (max-width: 780px) and (max-height: 380px){
+    .project-card-content{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        align-items: center; 
+        justify-content: center;
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+    .project-card-title{
+        display: none;
+    }
+
+    .project-card{
+        min-height: calc(var(--minHeightProjectCard, 50px)*0.7);
+    }
 }
