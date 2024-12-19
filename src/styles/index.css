@@ -1,7 +1,7 @@
 :root {
   --minAppWidth: 360px;
   --minAppHeight: 640px;
-  --minHeightCardContainer: 320px;
+  --minHeightCardContainer: 340px;
   --minHeightDescriptionText: 150px;
   --padding-relValue: 15%;
   --minHeightHeader: 60px;

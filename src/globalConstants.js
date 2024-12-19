@@ -30,7 +30,7 @@ export const SCROLL_THRESHOLD_HIGH    = 1700;
 // Text in der Info-Box auf der Startseite
 export const INFO_TEXT_START_SECTION = `Willkommen auf meiner Webseite!
 Hier wirst du meinen persönlichen und beruflichen Werdegang kennenlernen. 
-Zudem stelle ich dir meine Softwareprojekte vor, die ich bisher in meiner Freizeit bearbeitet habe.
+Zudem stelle ich dir meine Softwareprojekte vor, die ich bisher in meiner Freizeit erfolgreich bearbeitet habe.
 
 Für Feedback, Rückfragen oder Anfragen zu meinem Lebenslauf freue ich mich auf deine E-Mail.`;
 
@@ -171,7 +171,7 @@ export const JOB_EXPERIENCE_CONTENT = [
         url: 'https://www.itk-engineering.de/unternehmen/',
         location: 'Braunschweig',
         timePeriod: 'Seit 01/2023',
-        duties: ['Modellbasierte Unit-Entwicklung mit SCADE und SIMULINK nach ASIL-B', 
+        duties: ['Modellbasierte Unit-Entwicklung mit SCADE oder SIMULINK', 
                 'Implementierung und Durchführung von Unit-Tests mit Groovy (SPOCK)',
                 'Systemanalyse und Ableitung von Anforderungen',
                 'Toolentwicklung zur automatisierten Messdatenanalyse mit MATLAB']

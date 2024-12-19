@@ -50,7 +50,7 @@ const CardInfos = () => {
             <div className='info-project-content'>
                 <ul id='info-project-description'>
                     {projInfo?.projectDescription.map((item, index) => (
-                    <li key={index} style={{ whiteSpace: 'pre-line' }}>
+                    <li key={index} style={{ whiteSpace: 'pre-line', textAlign: 'left' }}>
                        <strong>{item.split(':')[0]}</strong>: {item.split(':')[1]}
                     </li>
                     ))}

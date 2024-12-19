@@ -40,14 +40,14 @@ const ProjectCard = ({cardIndex = undefined, projectName, projectURL, projectIma
 
     return ( 
         <motion.div
-        className="project-card"
-        style={{ height }}
-        variants={cardVariants}
-        initial="hidden"
-        animate="visible"
-        transition={{ duration: globalConstants.CARD_ANIMATION_DURATION }}
-        whileHover={{ scale: 0.95 }}  // Zusätzlicher Hover-Effekt
-      >
+            className="project-card"
+            style={{ height }}
+            variants={cardVariants}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: globalConstants.CARD_ANIMATION_DURATION }}
+            whileHover={{ scale: 0.95 }}  // Zusätzlicher Hover-Effekt
+        >
             <a className='project-reference' href={projectURL} target="_blank" rel="noopener noreferrer">
                 <img
                     id={`card-image-${projectName}`}

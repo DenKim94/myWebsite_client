@@ -49,10 +49,18 @@
 
 /* Mobile view: smartphone */
 @media screen and (max-width: 440px) and (max-height: 940px){
-    
     .image-container{
-        min-width: calc(var(--photoFrameSize)*0.8); 
-        min-height: calc(var(--photoFrameSize)*0.8);
+        min-width: calc(var(--photoFrameSize)*0.85); 
+        min-height: calc(var(--photoFrameSize)*0.85);
+        margin: 0 auto;
+    }
+}
+
+/* Mobile view: smartphone (mini) */
+@media screen and (max-width: 380px) and (max-height: 680px){
+    .image-container{
+        min-width: calc(var(--photoFrameSize)*0.7); 
+        min-height: calc(var(--photoFrameSize)*0.7);
         margin: 0 auto;
     }
 }

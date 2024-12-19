@@ -11,6 +11,7 @@
     align-items: center;
     overflow-y: auto;
     min-width: var(--minAppWidth);
+    min-height: calc(var(--minHeightProjectCard)*var(--numberVisibleProjectCards));
     height: calc(var(--minHeightProjectCard)*var(--numberVisibleProjectCards));
     padding-top: 10px;
     padding-bottom: 10px;
@@ -55,6 +56,23 @@
     }
 }
 
+/* Mobile view: tablet: mini */
+@media(max-width: 780px) and (max-height: 1050px){
+    .project-cards-container{
+        min-height: calc(var(--minHeightProjectCard)*1.2*var(--numberVisibleProjectCards));
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+/* Mobile view: tablet: mini */
+@media(max-width: 1050px) and (max-height: 780px){
+    .project-cards-container{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
 /* Mobile view: tablet (horizontal) */
 @media(max-width: 1370px) and (max-height: 1030px){
     .project-cards-container{
@@ -66,9 +84,9 @@
 @media screen and (max-width: 440px) and (max-height: 940px){
     .project-cards-container{
         width: var(--minAppWidth);
-        height: var(--minHeightCardContainer);
+        height: calc(var(--minHeightCardContainer));
         padding-top: 5px;
-        padding-bottom: 5px;
+        padding-bottom: 10px;
         gap: 5px;
     }
 
