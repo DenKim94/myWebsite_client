@@ -135,8 +135,20 @@
     }
 }
 
-/* Mobile view: smartphone */
-@media screen and (max-width: 380px) and (max-height: 680px){
+/* Mobile view: smartphone (mini) */
+@media screen and (max-width: 380px) and (max-height: 780px){
+    .description-text{
+        text-align: center;
+        height: calc(var(--minHeightDescriptionText)*1.4); 
+        line-height: 1.03;
+        margin-bottom: 10px;
+        padding-right: 0;
+        margin-right: 0;
+    }
+}
+
+/* Mobile view: smartphone (mini - horizontal) */
+@media screen and (max-width: 780px) and (max-height: 380px){
     .description-text{
         text-align: center;
         height: calc(var(--minHeightDescriptionText)*1.4); 

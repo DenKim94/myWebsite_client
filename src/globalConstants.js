@@ -1,5 +1,5 @@
 // Globale Konstanten für die Webanwendung [ERFORDERLICH]
-// Update: 14.12.2024
+// Update: 21.12.2024
 
 // Schwellenwerte für das responsive Design
 export const THRESHOLD_MAX_APP_WIDTH = 800;     
@@ -111,7 +111,7 @@ export const PROJECT_CARDS_DATA = [
         projectURL: PROJECT_URLS.website,
         projectImage: PATH_TO_PROJECT_IMAGES.website,
         projectDemo: PATH_TO_PROJECT_DEMOS.website
-    },       
+    }    
 ];    
 
 
