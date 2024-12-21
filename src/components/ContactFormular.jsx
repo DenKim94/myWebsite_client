@@ -10,30 +10,47 @@ const ContactFormular = () => {
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
     const formData = useRef();
     const [captchaToken, setCaptchaToken] = useState(null);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault();
 
         if (!captchaToken) {
-            console.log('Bitte lösen Sie das Captcha.');
+            console.log('Bitte lösen Sie das Captcha.'); // To-Do: Popup 
             return;
         }
 
-        emailjs
-        .sendForm(serviceId, templateId, formData.current, {
-          publicKey: publicKey,
-        })
-        .then(
-          () => {
-            console.log('SUCCESS!'); // To-Do: Popup 
-          },
-          (error) => {
-            console.log('FAILED...', error.text); // To-Do: Popup 
-          },
-        );
+        try{
+            const response = await fetch(`${API_URL}/api/validate-captcha`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ captchaToken }),
+              });
+
+            if(response.ok) {
+                emailjs
+                .sendForm(serviceId, templateId, formData.current, {
+                  publicKey: publicKey,
+                })
+                .then(
+                  () => {
+                    console.log('Nachricht erfolgreich gesendet!'); // To-Do: Popup 
+                  },
+                  (error) => {
+                    console.log('Fehler beim Senden der Nachricht: ', error.text); // To-Do: Popup 
+                  },
+                );
+
+            }else {
+                console.log('Fehler Validierung des Captchas.'); // To-Do: Popup 
+            } 
+
+        }catch(error){
+            console.error(error.message)
+        }
     }
 
     return ( 
@@ -59,7 +76,7 @@ const ContactFormular = () => {
                             placeholder='<Deine Nachricht an mich>' 
                             required/>
             </div>
-            {/* To-Do: ReCaptcha */}
+            {/* ReCaptcha */}
             <ReCAPTCHA
                 sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
                 onChange={(token) => setCaptchaToken(token)}
