@@ -264,6 +264,5 @@ Ich blicke optimistisch in die Zukunft, bereit, neue Herausforderungen anzunehme
 
 
 // Abschnitt Kontakt
-export const INFO_TEXT_CONTACT = ` Don'tbe so shy! Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
-At vero eos et accusam et justo duo dolores et ea rebum.`;
+export const INFO_TEXT_CONTACT = ` Don'tbe so shy! - Falls Du weitere Fragen hast oder eine Zusammenarbeit mit mir vorstellen kannst, schreibe mir gerne eine Nachricht.
+Ich freue mich auf den Austausch mit Dir und vielen Dank für deinen Besuch!`;

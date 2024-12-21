@@ -1,6 +1,6 @@
-import { useRef } from 'react';
+import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-// import ReCAPTCHA from "react-google-recaptcha";
+import ReCAPTCHA from "react-google-recaptcha";
 import './../styles/ContactFormular.css'
 import './../styles/Button.css'
 
@@ -12,9 +12,15 @@ const ContactFormular = () => {
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     const formData = useRef();
+    const [captchaToken, setCaptchaToken] = useState(null);
 
-    const sendEmail = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
+
+        if (!captchaToken) {
+            console.log('Bitte lösen Sie das Captcha.');
+            return;
+        }
 
         emailjs
         .sendForm(serviceId, templateId, formData.current, {
@@ -31,7 +37,7 @@ const ContactFormular = () => {
     }
 
     return ( 
-        <form className='contact-form' ref={formData} onSubmit={sendEmail}>
+        <form className='contact-form' ref={formData} onSubmit={handleSubmit}>
             <div className='form-label'>
                 <label id='name-label'>Name:</label>
                 <input type="text" 
@@ -54,7 +60,11 @@ const ContactFormular = () => {
                             required/>
             </div>
             {/* To-Do: ReCaptcha */}
-
+            <ReCAPTCHA
+                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                onChange={(token) => setCaptchaToken(token)}
+                onExpired={() => setCaptchaToken(null)}
+            />
 
             {/* Datenschutzbestimmungen */}
             <div className='data-privacy-container' style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
@@ -65,7 +75,7 @@ const ContactFormular = () => {
                     required
                 />
                 <label>
-                    Ich habe die{" "} 
+                    Ich stimme den{" "} 
                     <a 
                     href="src/assets/datenschutz.html"
                     target="_blank" 
@@ -74,7 +84,7 @@ const ContactFormular = () => {
                     >
                         Datenschutzbestimmungen
                     </a> 
-                    {" "} gelesen und stimme diesen zu.
+                    {" "}zu.
                 </label>
             </div>
             <input className="generic-button" id='send-button' type="submit" value="Senden" />

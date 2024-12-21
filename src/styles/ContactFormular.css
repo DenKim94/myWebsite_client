@@ -69,6 +69,10 @@
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 }
 
+#send-button{
+    margin: auto;
+}
+
 .data-privacy-container{
     display: flex;
     flex-direction: row;
@@ -80,6 +84,17 @@
 /* Mobile view: smartphone */
 @media screen and (max-width: 440px) and (max-height: 940px){
     .checkbox-data-privacy{
+        margin-top: 0;
+    }
+}
+
+/* Mobile view: smartphone (mini): horizontal */
+@media screen and (max-width: 780px) and (max-height: 380px){
+    .message-container textarea{
+        min-height: 80px;
+    }
+
+    #send-button{
         margin-top: 0;
     }
 }
