@@ -27,6 +27,10 @@ export const SCROLL_SCALING_FACTOR    = 0.6;
 export const SCROLL_THRESHOLD_LOW     = 1300;
 export const SCROLL_THRESHOLD_HIGH    = 1700;
 
+// Ablaufzeit zum Schließen der Popupnachricht in ms
+export const POPUP_TIMEOUT_ms = 3000;
+
+
 // Text in der Info-Box auf der Startseite
 export const INFO_TEXT_START_SECTION = `Willkommen auf meiner Webseite!
 Hier wirst du meinen persönlichen und beruflichen Werdegang kennenlernen. 
