@@ -44,7 +44,6 @@ const containerVariants = {
     exit: { opacity: 0, y: -50 , transition: { duration: 0.15 }},
   };
 
-  
   const ProjectCardsContainer = () => {
     const { visibleCardInfo } = useSharedContext();  
     const containerRef = useRef(null);
@@ -57,7 +56,6 @@ const containerVariants = {
 
     function showScrollbar(){
       if (containerRef.current) {
-        console.log("scrollbar is shown");
         containerRef.current.style.overflow = "auto";
       }
     };

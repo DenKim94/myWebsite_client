@@ -10,7 +10,7 @@ const ContactFormular = () => {
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+    const SERVER_URL = import.meta.env.VITE_SERVER_URL || 'http://localhost:3001';
 
     const formData = useRef();
     const [captchaToken, setCaptchaToken] = useState(null);
@@ -24,11 +24,15 @@ const ContactFormular = () => {
         }
 
         try{
-            const response = await fetch(`${API_URL}/api/validate-captcha`, {
+            const response = await fetch(`${SERVER_URL}/api/validate-captcha`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ captchaToken }),
               });
+              
+            // Antwort vom Server in JSON parsen
+            const data = await response.json();
+            console.log(data.message);
 
             if(response.ok) {
                 emailjs
@@ -44,8 +48,9 @@ const ContactFormular = () => {
                   },
                 );
 
-            }else {
-                console.log('Fehler Validierung des Captchas.'); // To-Do: Popup 
+            }else{
+
+                console.log('Fehler bei Validierung des Captchas.'); // To-Do: Popup 
             } 
 
         }catch(error){

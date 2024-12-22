@@ -58,9 +58,7 @@ const ProjectCard = ({cardIndex = undefined, projectName, projectURL, projectIma
                     style={{ borderRadius: '15px', marginTop: '0px' }}
                 />
             </a>
-            <div className='project-card-content'
-                onClick={() => setVisibleCardInfo({ cardIndex: cardIndex, isVisible: true })} 
-            >
+            <div className='project-card-content'>
                 <h3 className='project-card-title'>{projectName}</h3>
                 <Button
                     buttonID={`info-button-${projectName}`}
