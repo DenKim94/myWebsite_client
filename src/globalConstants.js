@@ -71,7 +71,7 @@ export const PROJECT_DESCRIPTION_WEBSITE= [`Beschreibung:
 export const PROJECT_URLS = {
     stratego: 'https://stratego-web.netlify.app',
     eca: 'https://github.com/DenKim94/PRJ_ECA',
-    website: 'https://github.com/DenKim94/PRJ_myPortfolioWebsite',
+    website: 'https://github.com/DenKim94/myWebsite_client',
 }
 
 // Pfade zu den Bildern für die Projekte (ProjectCard)
@@ -268,5 +268,21 @@ Ich blicke optimistisch in die Zukunft, bereit, neue Herausforderungen anzunehme
 
 
 // Abschnitt Kontakt
+export const SOCIAL_MEDIA_ITEMS = [
+    {
+        url: 'https://github.com/DenKim94',
+        logoPath: `${PATH_TO_ICONS}GitHub_Icon.svg`,
+    },
+    {
+        url: 'https://www.linkedin.com/in/denis-kim-1a3752111/',
+        logoPath: `${PATH_TO_ICONS}LinkedIn_Icon.svg`,
+    },
+];
+
+export const SOCIAL_MEDIA_LOGO_PATHS = [
+    `${PATH_TO_ICONS}GitHub_Icon.svg`,
+    `${PATH_TO_ICONS}LinkedIn_Icon.svg`,
+];
+
 export const INFO_TEXT_CONTACT = ` Don'tbe so shy! - Falls Du weitere Fragen hast oder eine Zusammenarbeit mit mir vorstellen kannst, schreibe mir gerne eine Nachricht.
 Ich freue mich auf den Austausch mit Dir und vielen Dank für deinen Besuch!`;
