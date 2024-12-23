@@ -13,13 +13,14 @@ import * as globalConstants from './../globalConstants.js'
  * THRESHOLD_MAX_APP_WIDTH.
  */
 function Header() {
-  const showSidebar = () => {
+
+  function showSidebar(){
     const sidebar = document.querySelector('.sidebar-elements')
     if(sidebar){
       sidebar.classList.add('open');
     }
   }
-  const hideSidebar = () => {
+  function hideSidebar(){
     const sidebar = document.querySelector('.sidebar-elements')
     if(sidebar){
       sidebar.classList.remove('open'); 
