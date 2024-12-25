@@ -10,8 +10,7 @@ export const SCROLL_VIEW_OFFSET = 0;            // Offset in Pixel für den Scro
 export const NUMBER_LOOP_ANIMATION = 1;       
 export const TYPE_ANIMATION_DURATION_1 = 60;       
 export const TYPE_ANIMATION_DURATION_2 = 65;
-export const HOLD_ANIMATION_DURATION_1 = 1550;  
-export const HOLD_ANIMATION_DURATION_2 = 1500;
+export const HOLD_ANIMATION_DURATION = 1550;  
 
 /* Relative Schwellenwerte (0-1) für die Anpassung des Offsets beim Scrollefffekt 
 im benötigten Format von framer-motion: [start, end] */
@@ -57,15 +56,15 @@ export const PROJECT_NAME_WEBSITE = 'Portfolio Webseite';
 export const PROJECT_DESCRIPTION_STRATEGO = [`Beschreibung: 
     Onlinespiel (Desktop), welches ursprünglich vom Brettspiel "Stratego" abgeleitet wurde.`, 
     `Projektumfang: ca. 400 Stunden`, 
-    `Learnings: React; NodeJS & ExpressJS; Cypress; CSS`]; 
+    `Kenntnisse: React; NodeJS & ExpressJS; Cypress; CSS`]; 
 
 export const PROJECT_DESCRIPTION_ECA = [`Beschreibung: Tool zur Stromkostenanalyse`, 
-    `Projektumfang: ca. 55 Stunden`, `Learnings: Python; SQLite; CustomTkinter`];
+    `Projektumfang: ca. 55 Stunden`, `Kenntnisse: Python; SQLite; CustomTkinter`];
 
 export const PROJECT_DESCRIPTION_WEBSITE= [`Beschreibung: 
     Eigene Webseite zur Vorstellung meiner Projekte und meines persönlichen sowie beruflichen Werdegangs.`, 
     `Projektumfang: ca. XXX Stunden`, 
-    `Learnings: React; HTML; CSS; Responsive Design; Vitest`];
+    `Kenntnisse: React; HTML; CSS; Responsive Design; Vitest`];
 
 // URLs zu den Webseiten der Projekte
 export const PROJECT_URLS = {
@@ -165,7 +164,7 @@ export const INFO_TEXT_JOB_EXPERIENCE = `Nach dem Abschluss meines Studiums war 
 Dabei habe ich recht schnell mein Interesse an der Softwareentwicklung und Programmierung entdeckt. 
 Aus Interesse entwickelte sich ein Wunsch nach Veränderung. 
 Daher entschied ich mich für einen Wechsel in die Industrie, wo ich nun seit über zwei Jahren erfolgreich als Softwareingenieur tätig bin.
-Aus Wunsch wurde Leidenschaft, der ich auch in meiner Freizeit nachgehe und mich mit eigenen Softwareprojekten kontinuierlich nach dem Motto "Build. Reflect. Improve." zum Webentwickler weiterbilde.`;
+Aus Wunsch wurde Leidenschaft, der ich auch in meiner Freizeit nachgehe und mich mit eigenen Softwareprojekten nach dem Motto "Build. Reflect. Improve." zum Webentwickler weiterbilde.`;
 
 
 export const JOB_EXPERIENCE_CONTENT = [
