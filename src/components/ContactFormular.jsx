@@ -26,6 +26,7 @@ const ContactFormular = () => {
         setPopupMessage(message);
         setPopupType(popUpType)
         setPopupVisible(true);
+        
         // Popupnachricht nach Ablauf des Timers schließen
         setTimeout(() => setPopupVisible(false), globalConstants.POPUP_TIMEOUT_ms); 
     }
@@ -38,24 +39,20 @@ const ContactFormular = () => {
             return;
         }
 
+        const serverTimeoutPromise = new Promise((_, reject) => 
+            setTimeout(() => reject(new Error("Timeout: Keine Rückmeldung vom Server.")), globalConstants.SERVER_TIMEOUT_THRESHOLD_ms)
+        );
+
         try{
             setIsLoading(true);
-            // const response = await fetch(`${SERVER_URL}/api/validate-captcha`, {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify({ captchaToken }),
-            // });
-
-            const response = await new Promise((resolve) => {
-                setTimeout(async () => {
-                    const res = await fetch(`${SERVER_URL}/api/validate-captcha`, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ captchaToken }),
-                    });
-                    resolve(res);
-                }, 5000);
-            });
+            const response = await Promise.race([
+                fetch(`${SERVER_URL}/api/validate-captcha`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ captchaToken }),
+                }),
+                serverTimeoutPromise
+            ]);
 
             setIsLoading(false);
 
@@ -83,7 +80,7 @@ const ContactFormular = () => {
             setIsLoading(false);
 
             console.error(error.message)
-            showPopup("Serverfehler ist aufgetreten.", "error"); 
+            showPopup("Serverfehler. Bitte erneut versuchen.", "error"); 
         }
     }
 

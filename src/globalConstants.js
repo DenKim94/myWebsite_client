@@ -267,6 +267,8 @@ Ich blicke optimistisch in die Zukunft, bereit, neue Herausforderungen anzunehme
 
 
 // Abschnitt Kontakt
+export const SERVER_TIMEOUT_THRESHOLD_ms = 60000; // Ablaufzeit für die Serverantwort in ms
+
 export const SOCIAL_MEDIA_ITEMS = [
     {
         url: 'https://github.com/DenKim94',
