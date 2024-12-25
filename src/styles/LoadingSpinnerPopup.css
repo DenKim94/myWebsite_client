@@ -1,0 +1,57 @@
+@import url('index.css');
+
+
+.popup {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 20px;
+    border-radius: 8px;
+    min-width: 310px;
+    max-width: 350px;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup.show {
+    bottom: 60px;
+    background-color: #333;
+    opacity: 1;
+}
+
+.popup.hide {
+    bottom: -100px;
+    opacity: 0;
+}
+
+.loading-spinner {
+    margin-right: 10px;
+} 
+
+.spinner-border {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #6157FF;
+    border-radius: 50%;
+    animation: spinner-border 0.75s linear infinite;
+}
+
+.spinner-message {
+    font-size: large;
+    font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+    color: #fff;
+    margin-left: 20px;
+}
+
+@keyframes spinner-border {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -5,6 +5,7 @@ import './../styles/ContactFormular.css'
 import './../styles/Button.css'
 import * as globalConstants from './../globalConstants.js';
 import PopUp from "./PopUp";
+import LoadingSpinnerPopup from './LoadingSpinnerPopup';
 
 
 const ContactFormular = () => {
@@ -19,6 +20,7 @@ const ContactFormular = () => {
     const [popupMessage, setPopupMessage] = useState("");
     const [popupType, setPopupType] = useState("info");
     const [popupVisible, setPopupVisible] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     function showPopup(message, popUpType) {
         setPopupMessage(message);
@@ -37,12 +39,26 @@ const ContactFormular = () => {
         }
 
         try{
-            const response = await fetch(`${SERVER_URL}/api/validate-captcha`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ captchaToken }),
-              });
-              
+            setIsLoading(true);
+            // const response = await fetch(`${SERVER_URL}/api/validate-captcha`, {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify({ captchaToken }),
+            // });
+
+            const response = await new Promise((resolve) => {
+                setTimeout(async () => {
+                    const res = await fetch(`${SERVER_URL}/api/validate-captcha`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ captchaToken }),
+                    });
+                    resolve(res);
+                }, 5000);
+            });
+
+            setIsLoading(false);
+
             if(response.ok) {
                 emailjs
                 .sendForm(serviceId, templateId, formData.current, {
@@ -50,7 +66,7 @@ const ContactFormular = () => {
                 })
                 .then(
                   () => {
-                    showPopup("Nachricht erfolgreich gesendet!", "success"); 
+                    showPopup("Nachricht erfolgreich gesendet!", "success");
                   },
                   (error) => {
                     console.log('Fehler beim Senden der Nachricht: ', error.text);
@@ -64,6 +80,8 @@ const ContactFormular = () => {
             } 
 
         }catch(error){
+            setIsLoading(false);
+
             console.error(error.message)
             showPopup("Serverfehler ist aufgetreten.", "error"); 
         }
@@ -123,8 +141,9 @@ const ContactFormular = () => {
                 </div>
                 <input className="generic-button" id='send-button' type="submit" value="Senden" />
             </form>
-            {/* Popup-Komponente */}
+            {/* Popup-Komponenten */}
             <PopUp message={popupMessage} visible={popupVisible} type={popupType} />
+            {!popupVisible && <LoadingSpinnerPopup isLoading={isLoading} />}
       </>
      );
 }
