@@ -1,5 +1,5 @@
 // Globale Konstanten für die Webanwendung [ERFORDERLICH]
-// Update: 21.12.2024
+// Update: 25.12.2024
 
 // Schwellenwerte für das responsive Design
 export const THRESHOLD_MAX_APP_WIDTH = 800;     
@@ -285,5 +285,5 @@ export const SOCIAL_MEDIA_LOGO_PATHS = [
     `${PATH_TO_ICONS}LinkedIn_Icon.svg`,
 ];
 
-export const INFO_TEXT_CONTACT = ` Don'tbe so shy! - Falls Du weitere Fragen hast oder eine Zusammenarbeit mit mir vorstellen kannst, schreibe mir gerne eine Nachricht.
+export const INFO_TEXT_CONTACT = `Don't be so shy! - Falls Du weitere Fragen hast oder eine Zusammenarbeit mit mir vorstellen kannst, schreibe mir gerne eine Nachricht.
 Ich freue mich auf den Austausch mit Dir und vielen Dank für deinen Besuch!`;
