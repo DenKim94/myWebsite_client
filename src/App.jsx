@@ -8,18 +8,24 @@ import { SharedStateProvider } from './context/SharedStateContext';
 import './styles/App.css'
 
 /**
- * The main app component. This component renders all other
- * components together.
- * Version: 1.0
+ * @component
  * 
- * The structure is as follows: 
- * - Header: navigation
- * - main: 
- *   - StartSection: start page with photo slider and text
- *   - PortfolioSection: page with portfolio projects
- *   - AboutSection: page about the author
- *   - ContactSection: page with contact information
- * - Footer: footer with copyright information
+ * @returns {JSX.Element} Die gerenderte App-Komponente.
+ * 
+ * @description
+ * Version: 1.0:
+ * Die Haupt-App-Komponente. Diese Komponente rendert alle anderen
+ * Komponenten zusammen.
+ * 
+ * Die App-Komponente verwendet den `SharedStateProvider`, um einen gemeinsamen Zustand für die untergeordneten Komponenten bereitzustellen.
+ * Der `SharedStateProvider` wird mit einem initialen Wert `{ cardIndex: undefined, isVisible: false }` bedatet.
+ * 
+ * @see {@link Header} für die Header-Komponente.
+ * @see {@link StartSection} für die StartSection-Komponente.
+ * @see {@link PortfolioSection} für die PortfolioSection-Komponente.
+ * @see {@link AboutSection} für die AboutSection-Komponente.
+ * @see {@link ContactSection} für die ContactSection-Komponente.
+ * @see {@link Footer} für die Footer-Komponente.
  */
 function App() {
 
