@@ -38,6 +38,8 @@ const ContactFormular = () => {
             showPopup("Bitte lösen Sie das Captcha.", "warning"); 
             return;
         }
+        
+        const userEmail = formData.current.from_UserEmail.value;
 
         const serverTimeoutPromise = new Promise((_, reject) => 
             setTimeout(() => reject(new Error("Timeout: Keine Rückmeldung vom Server.")), globalConstants.SERVER_TIMEOUT_THRESHOLD_ms)
@@ -49,7 +51,7 @@ const ContactFormular = () => {
                 fetch(`${SERVER_URL}/api/validate-captcha`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ captchaToken }),
+                    body: JSON.stringify({ captchaToken, userEmail}),
                 }),
                 serverTimeoutPromise
             ]);
@@ -64,6 +66,7 @@ const ContactFormular = () => {
                 .then(
                   () => {
                     showPopup("Nachricht erfolgreich gesendet!", "success");
+                    formData.current.reset();
                   },
                   (error) => {
                     console.log('Fehler beim Senden der Nachricht: ', error.text);
@@ -72,13 +75,12 @@ const ContactFormular = () => {
                 );
 
             }else{
-                console.log('Fehler bei Validierung des Captchas.'); 
-                showPopup("Fehler bei Validierung des Captchas. Bitte erneut versuchen.", "error"); 
+                const errorData = await response.json();
+                showPopup(errorData.error, "error"); 
             } 
 
         }catch(error){
             setIsLoading(false);
-
             console.error(error.message)
             showPopup("Serverfehler. Bitte erneut versuchen.", "error"); 
         }
