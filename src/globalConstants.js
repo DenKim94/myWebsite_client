@@ -9,8 +9,8 @@ export const SCROLL_VIEW_OFFSET = 0;            // Offset in Pixel für den Scro
 // Dauer in Millisekunden für die Tipp-Animationen der Texte
 export const NUMBER_LOOP_ANIMATION = 1;       
 export const TYPE_ANIMATION_DURATION_1 = 60;       
-export const TYPE_ANIMATION_DURATION_2 = 60;
-export const HOLD_ANIMATION_DURATION_1 = 1500;  
+export const TYPE_ANIMATION_DURATION_2 = 65;
+export const HOLD_ANIMATION_DURATION_1 = 1550;  
 export const HOLD_ANIMATION_DURATION_2 = 1500;
 
 /* Relative Schwellenwerte (0-1) für die Anpassung des Offsets beim Scrollefffekt 

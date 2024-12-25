@@ -3,6 +3,23 @@ import Typical from 'react-typical'
 import * as globalConstants from './../globalConstants.js'
 
 /**
+ * Generates steps for the Typical component based on the provided word and durations.
+ * 
+ * @param {string} word - The word to animate.
+ * @param {number} typeDuration - The duration for each character typing.
+ * @param {number} holdDuration - The duration to hold the complete word.
+ * @returns {Array} An array of steps for the Typical component.
+ */
+const generateSteps = (word, typeDuration, holdDuration) => {
+    const steps = [];
+    for (let i = 1; i <= word.length; i++) {
+        steps.push(word.substring(0, i), typeDuration);
+    }
+    steps.push(word, holdDuration);
+    return steps;
+}
+
+/**
  * Component for the text on the start page, which is initially invisible and then slides up.
  * The greeting text is animated using the react-typical library.
  * 
@@ -10,6 +27,12 @@ import * as globalConstants from './../globalConstants.js'
  * which contains a h1 element with the class 'greeting-text' and a p element with the class 'description-text'.
  */
 const InfoTextContainer = () => {
+    const steps = [
+        ...generateSteps('Denis.', globalConstants.TYPE_ANIMATION_DURATION_1, globalConstants.HOLD_ANIMATION_DURATION_1),
+        ...generateSteps('Webentwickler.', globalConstants.TYPE_ANIMATION_DURATION_2, globalConstants.HOLD_ANIMATION_DURATION_2),
+        ...generateSteps('Denis.', globalConstants.TYPE_ANIMATION_DURATION_1, globalConstants.HOLD_ANIMATION_DURATION_1),
+    ];
+
     return ( 
         <div className='info-text-container'>
             <h1 className="greeting-text">
@@ -17,48 +40,7 @@ const InfoTextContainer = () => {
                 <Typical
                     loop={globalConstants.NUMBER_LOOP_ANIMATION}
                     wrapper="span"
-                    steps={[
-                        'D', globalConstants.TYPE_ANIMATION_DURATION_1,
-                        'De', globalConstants.TYPE_ANIMATION_DURATION_1,
-                        'Den', globalConstants.TYPE_ANIMATION_DURATION_1,
-                        'Deni', globalConstants.TYPE_ANIMATION_DURATION_1,
-                        'Denis.', globalConstants.HOLD_ANIMATION_DURATION_1,   
-                        'Deni', globalConstants.TYPE_ANIMATION_DURATION_1,
-                        'Den', globalConstants.TYPE_ANIMATION_DURATION_1,
-                        'De', globalConstants.TYPE_ANIMATION_DURATION_1,
-                        'D', globalConstants.TYPE_ANIMATION_DURATION_1,
-                        '', globalConstants.TYPE_ANIMATION_DURATION_1, 
-                        'W', globalConstants.TYPE_ANIMATION_DURATION_2,
-                        'We', globalConstants.TYPE_ANIMATION_DURATION_2,
-                        'Web', globalConstants.TYPE_ANIMATION_DURATION_2,
-                        'Webe', globalConstants.TYPE_ANIMATION_DURATION_2,
-                        'Weben', globalConstants.TYPE_ANIMATION_DURATION_2,
-                        'Webent', globalConstants.TYPE_ANIMATION_DURATION_2,
-                        'Webentw', globalConstants.TYPE_ANIMATION_DURATION_2,
-                        'Webentwi', globalConstants.TYPE_ANIMATION_DURATION_2,
-                        'Webentwic', globalConstants.TYPE_ANIMATION_DURATION_2,
-                        'Webentwickl', globalConstants.TYPE_ANIMATION_DURATION_2,
-                        'Webentwickle', globalConstants.TYPE_ANIMATION_DURATION_2,
-                        'Webentwickler.', globalConstants.HOLD_ANIMATION_DURATION_2,   
-                        'Webentwickle', globalConstants.TYPE_ANIMATION_DURATION_2,
-                        'Webentwickl', globalConstants.TYPE_ANIMATION_DURATION_2,
-                        'Webentwick', globalConstants.TYPE_ANIMATION_DURATION_2,
-                        'Webentwic', globalConstants.TYPE_ANIMATION_DURATION_2,
-                        'Webentwi', globalConstants.TYPE_ANIMATION_DURATION_2,
-                        'Webentw', globalConstants.TYPE_ANIMATION_DURATION_2,
-                        'Webent', globalConstants.TYPE_ANIMATION_DURATION_2,
-                        'Weben', globalConstants.TYPE_ANIMATION_DURATION_2,
-                        'Webe', globalConstants.TYPE_ANIMATION_DURATION_2,
-                        'Web', globalConstants.TYPE_ANIMATION_DURATION_2,
-                        'We', globalConstants.TYPE_ANIMATION_DURATION_2,
-                        'W', globalConstants.TYPE_ANIMATION_DURATION_2,
-                        '', globalConstants.TYPE_ANIMATION_DURATION_2,
-                        'D', globalConstants.TYPE_ANIMATION_DURATION_1,
-                        'De', globalConstants.TYPE_ANIMATION_DURATION_1,
-                        'Den', globalConstants.TYPE_ANIMATION_DURATION_1,
-                        'Deni', globalConstants.TYPE_ANIMATION_DURATION_1,
-                        'Denis.', globalConstants.HOLD_ANIMATION_DURATION_1,   
-                    ]}
+                    steps={steps}
                 />
             </h1>     
         </div>
