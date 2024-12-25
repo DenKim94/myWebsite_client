@@ -4,14 +4,17 @@ import InfoTextContainer from './InfoTextContainer.jsx';
 import PhotoSlider from './PhotoSlider.jsx';
 import * as globalConstants from './../globalConstants.js'
 
+
 /**
- * The StartSection component is a React functional component that serves
- * as the start page section of the application. It renders a section
- * containing an 'InfoTextContainer' and a 'PhotoSlider', utilizing the
- * 'fullPhotoPath' constant from globalConstants to display images.
+ * StartSection-Komponente
  * 
- * @returns {JSX.Element} A JSX element representing the start section.
+ * Diese Komponente rendert den Startabschnitt der Webseite. 
+ * Sie enthält einen InfoTextContainer und einen PhotoSlider.
+ * 
+ * @component
+ * @returns {JSX.Element} Der gerenderte Startabschnitt
  */
+
 function StartSection() {
     return ( 
         <section id='start'className='start-section'>

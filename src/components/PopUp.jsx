@@ -1,6 +1,18 @@
 import PropTypes from 'prop-types';
 import "./../styles/PopUp.css";
 
+/**
+ * Popup-Komponente, die eine Nachricht anzeigt und je nach Typ unterschiedliche Stile anwendet.
+ *
+ * @param {Object} props - Die Eigenschaften, die an die Komponente übergeben werden.
+ * @param {string} props.message - Die Nachricht, die im Popup angezeigt wird.
+ * @param {boolean} props.visible - Gibt an, ob das Popup sichtbar ist oder nicht.
+ * @param {string} [props.type='info'] - Der Typ des Popups, der das Styling bestimmt. 
+ *                                       Mögliche Werte sind 'info', 'warning', 'success', 'error'.
+ *
+ * @returns {JSX.Element} Die gerenderte Popup-Komponente.
+ */
+
 const Popup = ({ message, visible, type = 'info' }) => {
   
     const normalizedType = (type || "info").toLowerCase();

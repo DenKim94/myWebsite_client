@@ -7,11 +7,11 @@ import { useRef } from "react";
 import { AnimatePresence, motion } from 'framer-motion';
 
 /**
- * A component that renders a container with project cards.
- * The component renders a CardInfos component if the shared state 'visibleCardInfo' is set to true.
- * Otherwise, it renders a container with ProjectCard components.
+ * Eine Komponente, die einen Container mit Projektkarten rendert.
+ * Die Komponente rendert eine CardInfos-Komponente, wenn der gemeinsame Zustand 'visibleCardInfo' auf true gesetzt ist.
+ * Andernfalls rendert sie einen Container mit ProjectCard-Komponenten.
  * 
- * @returns {JSX.Element} The rendered component.
+ * @returns {JSX.Element} Die gerenderte Komponente.
  */
 
 const containerVariants = {

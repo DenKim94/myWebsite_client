@@ -7,12 +7,13 @@ import './../styles/PortfolioSection.css'
 import * as globalConstants from './../globalConstants.js'
 
 /**
- * The PortfolioSection component renders a section containing a heading
- * and cards with project descriptions. The div-section is animated by using framer motion 
- * to scale up and become more opaque as the user scrolls into view.
+ * Die PortfolioSection-Komponente rendert einen Abschnitt, der eine Überschrift
+ * und Karten mit Projektbeschreibungen enthält. Der div-Abschnitt wird mit Framer Motion 
+ * animiert, um beim Scrollen in die Ansicht zu skalieren und undurchsichtiger zu werden.
  *
- * @returns {JSX.Element} The rendered component.
+ * @returns {JSX.Element} Das gerenderte Element.
  */
+
 function PortfolioSection() {
   const motionRef = useRef(null);
 

@@ -7,17 +7,17 @@ import { useSharedContext } from './../context/sharedStates';
 import { motion } from 'framer-motion';
 
 /**
- * A component that renders a project card.
+ * Eine Komponente, die eine Projektkarte rendert.
  * 
- * The project card renders an icon of the project, the project name, and a button to show more information.
- * When the button is clicked, the component changes a shared state to display the project information by another component.
- * The height of the card is dynamically adjusted based on the number of cards available.
+ * Die Projektkarte zeigt ein Symbol des Projekts, den Projektnamen und einen Button, um weitere Informationen anzuzeigen.
+ * Wenn der Button geklickt wird, ändert die Komponente einen gemeinsamen Zustand, um die Projektinformationen durch eine andere Komponente anzuzeigen.
+ * Die Höhe der Karte wird dynamisch basierend auf der Anzahl der verfügbaren Karten angepasst.
  * 
- * @param {number} cardIndex Index of specific card (optional).
- * @param {string} projectName The name of the project.
- * @param {string} projectURL The URL of the project.
- * @param {string} projectImage The URL of the preview image of the project.
- * @returns {JSX.Element} The rendered component.
+ * @param {number} [cardIndex] Index der spezifischen Karte (optional).
+ * @param {string} projectName Der Name des Projekts.
+ * @param {string} projectURL Die URL des Projekts.
+ * @param {string} projectImage Die URL des Vorschaubildes des Projekts.
+ * @returns {JSX.Element} Das gerenderte Element.
  */
 
 const cardVariants = {

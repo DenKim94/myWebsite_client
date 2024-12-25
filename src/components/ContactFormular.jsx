@@ -8,6 +8,48 @@ import PopUp from "./PopUp";
 import LoadingSpinnerPopup from './LoadingSpinnerPopup';
 
 
+/**
+ * ContactFormular-Komponente
+ * 
+ * Diese Komponente stellt ein Kontaktformular bereit, das es Benutzern ermöglicht, eine Nachricht zu senden.
+ * Es beinhaltet Felder für den Namen, die E-Mail-Adresse und die Nachricht des Benutzers sowie eine ReCAPTCHA-Überprüfung.
+ * 
+ * @component
+ * 
+ * @returns {JSX.Element} Ein JSX-Element, das das Kontaktformular darstellt.
+ * 
+ * @example
+ * <ContactFormular />
+ * 
+ * @remarks
+ * - Die Komponente verwendet die EmailJS-Bibliothek, um E-Mails zu senden.
+ * - Die ReCAPTCHA-Überprüfung stellt sicher, dass das Formular nicht von Bots ausgefüllt wird.
+ * - Popup-Nachrichten informieren den Benutzer über den Status des Formulars (Erfolg, Fehler, Warnung).
+ * - Die Komponente verwendet Umgebungsvariablen für die Konfiguration von EmailJS und ReCAPTCHA.
+ * 
+ * @requires useRef
+ * @requires useState
+ * @requires emailjs
+ * @requires ReCAPTCHA
+ * @requires PopUp
+ * @requires LoadingSpinnerPopup
+ * 
+ * @constant {string} serviceId - Die Service-ID für EmailJS.
+ * @constant {string} templateId - Die Template-ID für EmailJS.
+ * @constant {string} publicKey - Der öffentliche Schlüssel für EmailJS.
+ * @constant {string} SERVER_URL - Die URL des Servers für die Captcha-Validierung.
+ * 
+ * @function showPopup
+ * @description Zeigt eine Popup-Nachricht an.
+ * @param {string} message - Die Nachricht, die im Popup angezeigt werden soll.
+ * @param {string} popUpType - Der Typ des Popups (z.B. "info", "success", "warning", "error").
+ * 
+ * @function handleSubmit
+ * @description Behandelt das Absenden des Formulars.
+ * @param {Event} e - Das Submit-Event des Formulars.
+ * @returns {Promise<void>}
+ */
+
 const ContactFormular = () => {
     
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;

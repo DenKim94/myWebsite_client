@@ -3,6 +3,18 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 import * as globalConstants from './../globalConstants.js'
 
+/**
+ * PhotoSwitcher-Komponente
+ * 
+ * Diese Komponente ermöglicht das Durchblättern einer Reihe von Fotos.
+ * 
+ * @param {Object} props - Die Eigenschaften, die an die Komponente übergeben werden.
+ * @param {string[]} props.fullPhotoPath - Ein Array von Bildpfaden, die angezeigt werden sollen.
+ * @param {number} [props.size_px=globalConstants.PHOTO_SIZE_DEFAULT_PX] - Die Größe des Fotos in Pixeln. Standardwert ist globalConstants.PHOTO_SIZE_DEFAULT_PX.
+ * 
+ * @returns {JSX.Element} Die gerenderte PhotoSwitcher-Komponente.
+ */
+
 const PhotoSwitcher = ({ fullPhotoPath, size_px = globalConstants.PHOTO_SIZE_DEFAULT_PX }) => {
     const [imgIndex, setImgIndex] = useState(0);
 

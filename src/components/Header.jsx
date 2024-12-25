@@ -2,16 +2,30 @@ import {useState, useEffect} from 'react'
 import './../styles/Header.css'
 import * as globalConstants from './../globalConstants.js'
 
+
 /**
- * The Header component renders a fixed header at the top of the page with a logo
- * and a navigation bar. The navigation bar has a sidebar that is only visible
- * on mobile devices. The sidebar can be toggled by clicking on the hamburger
- * menu icon. The navigation bar also has links to the different sections of
- * the website. When the user clicks on a link, the corresponding section is
- * scrolled into view. The Header component also has a function to handle window
- * resizing and hide the sidebar when the window is larger than
- * THRESHOLD_MAX_APP_WIDTH.
+ * Header-Komponente, die die Navigationsleiste und das Logo der Website darstellt.
+ * 
+ * Funktionen:
+ * - showSidebar: Zeigt die Sidebar an, indem die Klasse 'open' hinzugefügt wird.
+ * - hideSidebar: Versteckt die Sidebar, indem die Klasse 'open' entfernt wird.
+ * - scrollToSection: Scrollt zu einem bestimmten Abschnitt der Seite, basierend auf dem href-Attribut des angeklickten Links.
+ * 
+ * State:
+ * - windowSize: Ein State-Objekt, das die aktuelle Breite und Höhe des Fensters speichert.
+ * 
+ * Effekte:
+ * - useEffect: Fügt einen Event-Listener hinzu, um die Fenstergröße bei einer Größenänderung zu aktualisieren und entfernt diesen bei der Bereinigung.
+ * 
+ * Bedingte Logik:
+ * - Versteckt die Sidebar, wenn die Fensterbreite größer oder gleich dem definierten Schwellenwert ist.
+ * 
+ * Rückgabewert:
+ * - Ein Header-Element mit einer festen Position, das das Logo und die Navigationsleiste enthält.
+ * 
+ * @returns {JSX.Element} Die Header-Komponente.
  */
+
 function Header() {
 
   function showSidebar(){

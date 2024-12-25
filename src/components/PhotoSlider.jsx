@@ -4,21 +4,20 @@ import PropTypes from 'prop-types';
 import { useState, useEffect, useRef } from 'react';
 import * as globalConstants from './../globalConstants.js'
 
+
 /**
- * Component for the photo slider on the start page.
+ * PhotoSlider-Komponente
  * 
- * @param {array<string>} fullPhotoPath Array of paths to the images to be displayed.
- * The images are displayed in order, and the component will cycle through
- * the array when it reaches the end.
+ * Diese Komponente zeigt eine Diashow von Fotos an, die automatisch vorwärts und rückwärts durchläuft,
+ * abhängig davon, ob die Komponente im sichtbaren Bereich ist.
  * 
- * @returns A JSX element which is a div with the class 'image-container',
- * containing a div with the class 'slider' which contains a div with the class 'slide'
- * for each image in the array. The 'slide' divs are positioned side by side
- * and have their background image set to the corresponding image in the array.
- * The 'slider' div is translated to the left by the width of the current image
- * (which is determined by the 'currentIndex' state variable) to create the
- * animation effect.
+ * @param {Object} props - Die Eigenschaften, die an die Komponente übergeben werden.
+ * @param {string[]} props.fullPhotoPath - Ein Array von Bildpfaden, die in der Diashow angezeigt werden.
+ * @param {number} [props.size_px=globalConstants.PHOTO_SIZE_DEFAULT_PX] - Die Größe des Fotoframes in Pixeln.
+ * 
+ * @returns {JSX.Element} Die gerenderte PhotoSlider-Komponente.
  */
+
 const PhotoSlider = ({ fullPhotoPath, size_px = globalConstants.PHOTO_SIZE_DEFAULT_PX}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isInView, setIsInView] = useState(false); // Status, ob die Komponente im sichtbaren Bereich ist

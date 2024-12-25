@@ -9,6 +9,7 @@ import * as globalConstants from './../globalConstants.js'
  * @returns Ein JSX-Element, das ein div mit der Klasse 'info-text-container' enthält,
  * welches ein h1-Element mit der Klasse 'greeting-text' und ein p-Element mit der Klasse 'description-text' enthält.
  */
+
 const InfoTextContainer = () => {
     const [text] = useTypewriter({
         words: ['Denis.', 'Webentwickler.', 'Denis.'], // Animierte Wörter

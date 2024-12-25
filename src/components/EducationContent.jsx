@@ -1,6 +1,20 @@
 import './../styles/EducationContent.css';
 import * as globalConstants from './../globalConstants.js';
 
+/**
+ * EducationContent-Komponente
+ * 
+ * Diese Komponente rendert eine Liste von Bildungseinträgen basierend auf den Daten in `globalConstants.EDUCATION_CONTENT`.
+ * Jeder Eintrag enthält eine Zeitperiode, eine Beschreibung, eine Institution und eine Liste von Aufgaben.
+ * 
+ * @component
+ * @example
+ * // Beispiel für die Verwendung der EducationContent-Komponente
+ * // <EducationContent />
+ * 
+ * @returns {JSX.Element} Eine Liste von Bildungseinträgen.
+ */
+
 const EducationContent = () => {
     return ( 
         <div className='education-content'>

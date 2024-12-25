@@ -1,6 +1,19 @@
 import './../styles/JobContent.css';
 import * as globalConstants from './../globalConstants.js';
 
+/**
+ * JobExperienceContent-Komponente
+ * 
+ * Diese Komponente rendert eine Liste von Berufserfahrungen basierend auf den globalen Konstanten.
+ * 
+ * @component
+ * @example
+ * // Beispiel für die Verwendung der JobExperienceContent-Komponente
+ * <JobExperienceContent />
+ * 
+ * @returns {JSX.Element} Eine React-Komponente, die die Berufserfahrungen anzeigt.
+ */
+
 const JobExperienceContent = () => {
 
     return ( 

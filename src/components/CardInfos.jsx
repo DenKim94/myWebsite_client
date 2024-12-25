@@ -6,17 +6,33 @@ import { motion } from 'framer-motion';
 
 
 /**
- * A component that renders a container with project informations.
- * The component renders a CardInfos component if the shared state 'visibleCardInfo' is set to true.
- * Otherwise, it renders nothing.
+ * Die CardInfos-Komponente zeigt detaillierte Informationen zu einem ausgewählten Projekt an.
+ * Sie verwendet die `useSharedContext`-Hook, um den aktuell sichtbaren Kartenindex zu erhalten und 
+ * die Sichtbarkeit der Karteninformationen zu steuern.
  * 
- * The component uses framer motion to slide in and out of the screen.
- * The animation duration can be adjusted by changing the 'transition' property.
+ * @component
+ * @returns {JSX.Element} Eine animierte Container-Div, die den Projektnamen, die Projektbeschreibung und 
+ * optional ein Projekt-Demovideo anzeigt. Ein Schließen-Button ist ebenfalls enthalten, um die Karteninformationen auszublenden.
  * 
- * The component also renders a button to close the container.
- * When the button is clicked, the component changes a shared state to display the project information by another component.
+ * @example
+ * // Beispielverwendung:
+ * <CardInfos />
  * 
- * @returns {JSX.Element} The rendered component.
+ * @remarks
+ * Diese Komponente verwendet `framer-motion` für Animationen und `globalConstants` für Konfigurationswerte.
+ * 
+ * @hook
+ * @name useSharedContext
+ * @description Hook, um den gemeinsam genutzten Zustand der sichtbaren Karteninformationen zu verwalten.
+ * 
+ * @constant {Object} globalConstants.PROJECT_CARDS_DATA - Enthält die Daten aller Projektkarten.
+ * @constant {number} globalConstants.CARDINFO_ANIMATION_DURATION - Dauer der Animation für die Karteninformationen.
+ * 
+ * @typedef {Object} ProjectInfo
+ * @property {string} projectName - Der Name des Projekts.
+ * @property {string} projectURL - Die URL des Projekts.
+ * @property {string[]} projectDescription - Eine Liste von Beschreibungen des Projekts.
+ * @property {string} [projectDemo] - Optionaler Pfad zu einem Demovideo des Projekts.
  */
 
 const slideAnimation = {

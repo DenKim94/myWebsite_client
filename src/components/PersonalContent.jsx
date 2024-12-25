@@ -2,6 +2,14 @@ import './../styles/PersonalContent.css';
 import PhotoSwitcher from './PhotoSwitcher.jsx';
 import * as globalConstants from './../globalConstants.js';
 
+/**
+ * PersonalContent-Komponente
+ * 
+ * Diese Komponente rendert persönliche Inhalte, einschließlich eines Foto-Switchers und einer Beschreibung.
+ * 
+ * @returns {JSX.Element} Ein div-Element mit der Klasse "personal-content", das einen Foto-Switcher und eine Beschreibung enthält.
+ */
+
 const PersonalContent = () => {
     return ( 
         <div className="personal-content">

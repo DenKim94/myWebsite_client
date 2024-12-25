@@ -6,6 +6,31 @@ import JobExperienceContent from './JobExperienceContent.jsx'
 import PersonalContent from './PersonalContent.jsx'
 import * as globalConstants from './../globalConstants.js';
 
+/**
+ * TabsContainer-Komponente
+ * 
+ * Diese Komponente rendert eine Container für Tabs, die verschiedene Inhalte anzeigen.
+ * Die Tabs und deren Inhalte werden dynamisch basierend auf den globalConstants.TAB_INFOS konfiguriert.
+ * 
+ * @component
+ * 
+ * @example
+ * return (
+ *   <TabsContainer />
+ * )
+ * 
+ * @returns {JSX.Element} Ein Container mit Tabs und deren zugehörigen Inhalten.
+ * 
+ * @description
+ * - Verwendet useState, um den aktiven Tab und die Sichtbarkeit des Containers zu verwalten.
+ * - Verwendet useRef, um auf das DOM-Element des Containers zuzugreifen.
+ * - Verwendet useEffect, um einen IntersectionObserver zu initialisieren, der die Sichtbarkeit des Containers überwacht.
+ * - Die aktive Komponente wird basierend auf der aktiven Tab-ID aus einer Map von Komponenten bestimmt.
+ * 
+ * @see {@link globalConstants.TAB_INFOS} für die Konfiguration der Tabs.
+ * @see {@link useSharedContext} für den Kontext, der die Sichtbarkeit der Karte verwaltet.
+ */
+
 const TabsContainer = () => {
     const [activeTab, setActiveTab] = useState(globalConstants.TAB_INFOS[0].label);
     const [isVisible, setIsVisible] = useState(false);

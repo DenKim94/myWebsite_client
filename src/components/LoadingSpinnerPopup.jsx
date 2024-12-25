@@ -1,6 +1,16 @@
 import PropTypes from 'prop-types';
 import "./../styles/LoadingSpinnerPopup.css";
 
+/**
+ * LoadingSpinnerPopup-Komponente zeigt ein Lade-Popup mit einer Spinner-Animation und einer Nachricht an.
+ *
+ * @param {Object} props - Die Eigenschaften, die an die Komponente übergeben werden.
+ * @param {boolean} props.isLoading - Gibt an, ob das Popup angezeigt werden soll.
+ * @param {string} [props.message="Bitte warten..."] - Die Nachricht, die im Popup angezeigt wird.
+ *
+ * @returns {JSX.Element} Die gerenderte LoadingSpinnerPopup-Komponente.
+ */
+
 const LoadingSpinnerPopup = ({ isLoading, message = "Bitte warten..."}) => {
 
     return (
