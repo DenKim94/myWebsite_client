@@ -109,6 +109,7 @@ const ContactFormular = () => {
                   () => {
                     showPopup("Nachricht erfolgreich gesendet!", "success");
                     formData.current.reset();
+                    setCaptchaToken(null);
                   },
                   (error) => {
                     console.log('Fehler beim Senden der Nachricht: ', error.text);
