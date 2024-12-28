@@ -158,6 +158,7 @@ const ContactFormular = () => {
                     sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
                     onChange={(token) => setCaptchaToken(token)}
                     onExpired={() => setCaptchaToken(null)}
+                    style={{ maxHeight: '120px' }} 
                 />
 
                 {/* Datenschutzbestimmungen */}

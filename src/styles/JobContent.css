@@ -86,7 +86,7 @@
     }
 
     .job-content {
-        max-height: calc((90vh - var(--minHeightSectionsOffset, 50px))*0.80); 
+        max-height: calc((90vh - var(--minHeightSectionsOffset, 50px))*0.83); 
     }
 }
 
