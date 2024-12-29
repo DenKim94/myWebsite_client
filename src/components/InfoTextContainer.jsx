@@ -12,16 +12,16 @@ import * as globalConstants from './../globalConstants.js'
 
 const InfoTextContainer = () => {
     const [text] = useTypewriter({
-        words: ['Denis.', 'Webentwickler.', 'Denis.'], // Animierte Wörter
-        loop: globalConstants.NUMBER_LOOP_ANIMATION,   // Anzahl der Wiederholungen
+        words: ["Denis.", "Webentwickler.", "Denis."],          // Animierte Wörter
+        loop: globalConstants.NUMBER_LOOP_ANIMATION,            // Anzahl der Wiederholungen
         typeSpeed: globalConstants.TYPE_ANIMATION_DURATION_1,   // Schreibgeschwindigkeit
         deleteSpeed: globalConstants.TYPE_ANIMATION_DURATION_2, // Löschgeschwindigkeit
-        delaySpeed: globalConstants.HOLD_ANIMATION_DURATION,  // Pause zwischen den Wörtern
+        delaySpeed: globalConstants.HOLD_ANIMATION_DURATION,    // Pause zwischen den Wörtern
     });
 
     return ( 
-        <div className='info-text-container'>
-            <h1 className="greeting-text">
+        <div className="info-text-container">
+            <h1 className="greeting-text" data-testid="animated-text">
                 Hallo, ich bin{' '}
                 <span>{text}</span>
                 <Cursor cursorStyle="|" />

@@ -75,6 +75,7 @@ const PhotoSlider = ({ fullPhotoPath, size_px = globalConstants.PHOTO_SIZE_DEFAU
         <div
           ref={sliderRef} // Referenz für den IntersectionObserver
           className="image-container"
+          data-testid="image-container"
           style={{
             '--border-color': globalConstants.PHOTO_BORDER_COLOR,
             '--border-width': globalConstants.PHOTO_BORDER_WIDTH,
@@ -83,12 +84,14 @@ const PhotoSlider = ({ fullPhotoPath, size_px = globalConstants.PHOTO_SIZE_DEFAU
         >
         <div
           className="slider"
+          data-testid="photo-slider"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {fullPhotoPath.map((imagePath, index) => (
             <div
                 className="slide"
                 key={index}
+                data-testid={`photo-slide-${index}`} // Test-ID für jedes Foto
                 style={{ backgroundImage: `url(${imagePath})` }}
             />
           ))}

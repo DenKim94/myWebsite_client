@@ -1,5 +1,5 @@
 // Globale Konstanten für die Webanwendung [ERFORDERLICH]
-// Update: 25.12.2024
+// Update: 29.12.2024
 
 // Schwellenwerte für das responsive Design
 export const THRESHOLD_MAX_APP_WIDTH = 800;     
@@ -271,11 +271,11 @@ export const SERVER_TIMEOUT_THRESHOLD_ms = 60000; // Ablaufzeit für die Servera
 
 export const SOCIAL_MEDIA_ITEMS = [
     {
-        url: 'https://github.com/DenKim94',
+        url: "https://github.com/DenKim94",
         logoPath: `${PATH_TO_ICONS}GitHub_Icon.svg`,
     },
     {
-        url: 'https://www.linkedin.com/in/denis-kim-1a3752111/',
+        url: "http://linkedin.com/in/denis-kim-1a3752111", 
         logoPath: `${PATH_TO_ICONS}LinkedIn_Icon.svg`,
     },
 ];
