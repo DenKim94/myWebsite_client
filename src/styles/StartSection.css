@@ -63,7 +63,8 @@
 /* Mobile view: laptop */
 @media(max-width: 1930px) and (max-height: 1120px){
     .description-text{
-        padding-right: 15px;
+        padding-right: 60px;
+        margin-right: 0px;
     }
 }
 
