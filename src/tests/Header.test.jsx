@@ -5,7 +5,7 @@ import Header from '../components/Header';
 import { testInputs } from './inputs.js';
 import * as testFunctions from './helperFunctions.js';
 
-describe('Test: Header Komponente', () => {
+describe('Tests: Header Komponente', () => {
     // Bildschirmbreite vordefinieren
     beforeEach(() => {
         window.innerWidth = testInputs.defaultWindowWidth;
@@ -48,7 +48,7 @@ describe('Test: Header Komponente', () => {
         expect(navElementTexts).toEqual(testInputs.navBarValues);
     })
 
-    it('TC_03: Navigation der Links führt zum entsprechenden Abschnitt', () => {
+    it('TC_03: Navigation der Links führt nach dem Klick zum entsprechenden Abschnitt', () => {
         // Setup DOM with both sections
         document.body.innerHTML = `
           <header class="fixed-header" style="height: 60px"></header>

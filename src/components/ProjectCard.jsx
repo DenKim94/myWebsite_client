@@ -41,6 +41,7 @@ const ProjectCard = ({cardIndex = undefined, projectName, projectURL, projectIma
     return ( 
         <motion.div
             className="project-card"
+            data-testid="project-card"
             style={{ height }}
             variants={cardVariants}
             initial="hidden"
@@ -58,8 +59,8 @@ const ProjectCard = ({cardIndex = undefined, projectName, projectURL, projectIma
                     style={{ borderRadius: '15px', marginTop: '0px' }}
                 />
             </a>
-            <div className='project-card-content'>
-                <h3 className='project-card-title'>{projectName}</h3>
+            <div className="project-card-content" data-testid="project-card-content">
+                <h3 className="project-card-title" data-testid="project-card-title">{projectName}</h3>
                 <Button
                     buttonID={`info-button-${projectName}`}
                     buttonText={"Mehr Infos"}

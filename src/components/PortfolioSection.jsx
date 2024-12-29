@@ -66,8 +66,8 @@ function PortfolioSection() {
   const scaledProgress = useTransform(scrollYProgress, [0, 1], [globalConstants.SCROLL_SCALING_FACTOR, 1]);
 
   return (
-      <section id='portfolio' className='portfolio-section'>
-        <h1 id='portfolio-title'>Meine Projekte</h1>
+      <section id="portfolio" data-testid="portfolio-section" className="portfolio-section">
+        <h1 id="portfolio-title" data-testid="portfolio-title">Meine Projekte</h1>
         <motion.div
           ref={motionRef}
           style={{
@@ -75,8 +75,9 @@ function PortfolioSection() {
             opacity: scaledProgress,
             position: 'relative'
           }}
-          id='portfolio-motion-div'
-          className='portfolio-content-container'
+          id="portfolio-motion-div"
+          data-testid="portfolio-motion-div"
+          className="portfolio-content-container"
         >
           <GeneralProjectDescription />
           <ProjectCardsContainer />

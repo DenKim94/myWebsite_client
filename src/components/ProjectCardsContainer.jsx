@@ -69,6 +69,7 @@ const containerVariants = {
             <motion.div
               ref={containerRef}
               className="project-cards-container"
+              data-testid="project-cards-container"
               variants={containerVariants}
               initial="hidden"
               animate="visible"

@@ -16,7 +16,7 @@ import './../styles/PortfolioSection.css'
 
 const GeneralProjectDescription = () => {
     return ( 
-        <div className='general-project-description'>
+        <div className="general-project-description" data-testid="general-project-description">
             <p>
                 {globalConstants.GENERAL_PROJECT_DESCRIPTION}
             </p>

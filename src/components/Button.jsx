@@ -14,7 +14,7 @@ import PropTypes from 'prop-types';
 
 const Button = ({buttonID = 'default-button', buttonText = 'Click Me', callBackFcn}) => {
     return ( 
-        <button className='generic-button' id={buttonID} onClick={callBackFcn}>
+        <button className='generic-button' data-testid={buttonID} id={buttonID} onClick={callBackFcn}>
             {buttonText}
         </button>
      );

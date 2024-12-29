@@ -28,9 +28,9 @@ vi.mock("react-simple-typewriter", () => ({
     Cursor: ({ cursorStyle }) => <span>{cursorStyle}</span>,
   }));
   
-describe("Test: StartSection Komponente", () => {
+describe("Tests: StartSection Komponente", () => {
 
-    it("TC_01: StartSection wird korrekt angezeigt", async () => {
+    it("TC_01: StartSection wird korrekt angezeigt", () => {
        
         const { getByTestId } = render(<StartSection />);
         const startSection = getByTestId("start-section");
@@ -39,7 +39,7 @@ describe("Test: StartSection Komponente", () => {
     
     });
 
-    it("TC_02: Begrüßungstext wird korrekt angezeigt", async () => {
+    it("TC_02: Begrüßungstext wird korrekt angezeigt", () => {
         
         const { getByTestId } = render(<InfoTextContainer />);
         const greetingText = getByTestId("animated-text");
@@ -61,7 +61,7 @@ describe("Test: StartSection Komponente", () => {
         });
     });
 
-    it("TC_04: PhotoSlider wird korrekt angezeigt", async () => {
+    it("TC_04: PhotoSlider wird korrekt angezeigt", () => {
         
         const { getByTestId } = render(<PhotoSlider fullPhotoPath = {globalConstants.fullPhotoPath_slider} />);
         const photoContainer = getByTestId("image-container");
@@ -69,7 +69,7 @@ describe("Test: StartSection Komponente", () => {
         expect(photoContainer).toBeVisible();
     });
 
-    it("TC_05: Die Fotos werden im PhotoSlider korrekt angezeigt", async () => {
+    it("TC_05: Die Fotos werden im PhotoSlider korrekt angezeigt", () => {
         // Beispiel-Foto-Pfade
         const photoPaths = globalConstants.fullPhotoPath_slider;
 
