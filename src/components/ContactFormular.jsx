@@ -98,8 +98,6 @@ const ContactFormular = () => {
                 serverTimeoutPromise
             ]);
 
-            setIsLoading(false);
-
             if(response.ok) {
                 emailjs
                 .sendForm(serviceId, templateId, formData.current, {
@@ -107,17 +105,20 @@ const ContactFormular = () => {
                 })
                 .then(
                   () => {
+                    setIsLoading(false);
                     showPopup("Nachricht erfolgreich gesendet!", "success");
                     formData.current.reset();
                     setCaptchaToken(null);
                   },
                   (error) => {
+                    setIsLoading(false);
                     console.log('Fehler beim Senden der Nachricht: ', error.text);
                     showPopup("Fehler beim Senden der Nachricht.", "error"); 
                   },
                 );
 
             }else{
+                setIsLoading(false);
                 const errorData = await response.json();
                 showPopup(errorData.error, "error"); 
             } 
