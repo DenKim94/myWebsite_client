@@ -46,7 +46,8 @@ const CardInfos = () => {
     const projInfo = globalConstants.PROJECT_CARDS_DATA[visibleCardInfo?.cardIndex];
 
     return ( 
-        <motion.div className='card-infos-container'
+        <motion.div className="card-infos-container"
+            data-testid="card-infos-container"
             initial="hidden"
             animate="visible"
             exit="exit"
@@ -57,14 +58,14 @@ const CardInfos = () => {
                 <a  href={projInfo?.projectURL} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    id='info-project-title'
+                    id="info-project-title"
                     style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}
                 >
                     {projInfo?.projectName}
                 </a>
             </h2>
-            <div className='info-project-content'>
-                <ul id='info-project-description'>
+            <div className="info-project-content" data-testid="info-project-content">
+                <ul id="info-project-description">
                     {projInfo?.projectDescription.map((item, index) => (
                     <li key={index} style={{ whiteSpace: 'pre-line', textAlign: 'left' }}>
                        <strong>{item.split(':')[0]}</strong>: {item.split(':')[1]}
@@ -73,7 +74,7 @@ const CardInfos = () => {
                 </ul> 
                 
             {projInfo?.projectDemo ? (   
-                <video className = 'info-project-demo' width="90%" height="auto" controls controlsList="nodownload">
+                <video className = "info-project-demo" width="90%" height="auto" controls controlsList="nodownload">
                     <source src={projInfo.projectDemo} type="video/mp4"/>
                     Ihr Browser unterstützt das Video-Tag nicht.
                 </video>
