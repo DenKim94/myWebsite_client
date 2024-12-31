@@ -81,10 +81,28 @@
     min-height: 20px;
 }
 
+/* Mobile view: tablet (horizontal) */
+@media(max-width: 1370px) and (max-height: 1030px){
+    .message-container textarea{
+        min-height: 100px;
+    }
+
+    .contact-form{
+        gap: 15px;
+    }
+}
+
 /* Mobile view: smartphone */
 @media screen and (max-width: 440px) and (max-height: 940px){
     .checkbox-data-privacy{
         margin-top: 0;
+    }
+}
+
+/* Mobile view: smartphone (horizontal) */
+@media screen and (max-width: 940px) and (max-height: 440px){
+    .message-container textarea{
+        min-height: 80px;
     }
 }
 
