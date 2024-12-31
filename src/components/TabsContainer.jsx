@@ -32,7 +32,7 @@ import * as globalConstants from './../globalConstants.js';
  */
 
 const TabsContainer = () => {
-    const [activeTab, setActiveTab] = useState(globalConstants.TAB_INFOS[0].label);
+    const [activeTab, setActiveTab] = useState(globalConstants.TAB_INFOS[0].label); // (Default) erster Tab ist aktiv
     const [isVisible, setIsVisible] = useState(false);
     const sliderRef = useRef(null);
     const { visibleCardInfo } = useSharedContext();
@@ -76,6 +76,10 @@ const TabsContainer = () => {
         }
     }, [visibleCardInfo.isVisible]);
 
+    if (!activeTabId) {
+        return null;
+    }
+
     // Die aktive Komponente basierend auf der aktiven Tab-ID bestimmen (Null indiziert)
     const ActiveComponent = Object.values(COMPONENT_MAP)[activeTabId-1];
 
@@ -85,11 +89,11 @@ const TabsContainer = () => {
             className={`tabs-container ${isVisible ? 'animated' : ''}`}
             style={visibleCardInfo.isVisible ? {zIndex: -10} : {zIndex: 0}}
         >
-            <div className="tabs">
+            <div className="tabs" data-testid="tabs">
                 {globalConstants.TAB_INFOS.map((tab) => (
                     <button
                         key={tab.label}
-                        id='about-tab'
+                        id="about-tab"
                         className={`tab ${activeTab === tab.label ? 'active' : ''}`}
                         onClick={() => setActiveTab(tab.label)}
                     >
@@ -102,7 +106,7 @@ const TabsContainer = () => {
                     </button>
                 ))}
             </div>
-            <div className="tab-content">
+            <div className="tab-content" data-testid="active-tab-content">
                 <ActiveComponent />
             </div>
         </div>

@@ -33,7 +33,7 @@ const Popup = ({ message, visible, type = 'info' }) => {
       };
 
     return (
-        <div className={`popup ${visible ? "show" : "hide"}`} style={popupStyle}>
+        <div className={`popup ${visible ? "show" : "hide"}`} data-testid="pop-up" style={popupStyle}>
             {message}
         </div>
     );

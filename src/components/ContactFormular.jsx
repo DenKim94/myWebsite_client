@@ -132,41 +132,50 @@ const ContactFormular = () => {
 
     return ( 
         <>
-            <form className='contact-form' ref={formData} onSubmit={handleSubmit}>
-                <div className='form-label'>
-                    <label id='name-label'>Name:</label>
-                    <input type="text" 
+            <form className="contact-form" 
+                data-testid="contact-form"
+                ref={formData} 
+                onSubmit={handleSubmit}>
+
+                <div className="form-label">
+                    <label id="name-label">Name:</label>
+                    <input type="text"
+                            data-testid="name-input" 
                             name="from_UserName"
-                            placeholder='<Dein Name>' 
+                            placeholder="<Dein Name>" 
                             required/>
                 </div>
-                <div className='form-label'>
-                    <label className='email-label'>E-Mail:</label>
+                <div className="form-label">
+                    <label className="email-label">E-Mail:</label>
                     <input type="email" 
+                            data-testid="email-input"
                             name="from_UserEmail"
-                            placeholder='<Deine E-Mail>'  
+                            placeholder="<Deine E-Mail>"  
                             required/>
                 </div>
-                <div className='message-container'>
-                    <label className='message-label'>Nachricht:</label>
+                <div className="message-container">
+                    <label className="message-label">Nachricht:</label>
                     <textarea id="text-field" 
+                                data-testid="message-input"
                                 name="message"
-                                placeholder='<Deine Nachricht an mich>' 
+                                placeholder="<Deine Nachricht an mich>" 
                                 required/>
                 </div>
                 {/* ReCaptcha */}
                 <ReCAPTCHA
                     sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                    data-testid="recaptcha"
                     onChange={(token) => setCaptchaToken(token)}
                     onExpired={() => setCaptchaToken(null)}
                     style={{ maxHeight: '120px' }} 
                 />
 
                 {/* Datenschutzbestimmungen */}
-                <div className='data-privacy-container' style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
+                <div className="data-privacy-container" style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
                     <input 
                         type="checkbox" 
-                        className="checkbox-data-privacy" 
+                        className="checkbox-data-privacy"
+                        data-testid="data-privacy-checkbox" 
                         style={{ marginRight: '8px' }} 
                         required
                     />
@@ -183,7 +192,7 @@ const ContactFormular = () => {
                         {" "}zu.
                     </label>
                 </div>
-                <input className="generic-button" id='send-button' type="submit" value="Senden" />
+                <input className="generic-button" id="send-button" type="submit" value="Senden" />
             </form>
             {/* Popup-Komponenten */}
             <PopUp message={popupMessage} visible={popupVisible} type={popupType} />

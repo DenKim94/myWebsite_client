@@ -27,7 +27,7 @@ const PhotoSwitcher = ({ fullPhotoPath, size_px = globalConstants.PHOTO_SIZE_DEF
     };
 
     return (
-        <div className="switcher-container">
+        <div className="switcher-container" data-testid="switcher-container">
             <div
             className="image-switch-container"
             style={{
@@ -68,9 +68,10 @@ const PhotoSwitcher = ({ fullPhotoPath, size_px = globalConstants.PHOTO_SIZE_DEF
         </div>
     );
 };
+
 PhotoSwitcher.propTypes = {
     fullPhotoPath: PropTypes.arrayOf(PropTypes.string),
     size_px: PropTypes.string
-  };
+};
 
 export default PhotoSwitcher;
