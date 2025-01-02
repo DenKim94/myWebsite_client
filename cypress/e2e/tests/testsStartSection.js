@@ -7,7 +7,7 @@ export function run_tests(){
     context("Desktop View", () => {
         beforeEach(() => {
             // Simuliere Desktop-Ansicht
-            cy.viewport(viewportSizes.desktop[0], viewportSizes.desktop[1]);
+            cy.viewport(viewportSizes.laptop_14[0], viewportSizes.laptop_14[1]);
         });
         
             it("Startseite: Alle Elemente im Header werden korrekt angezeigt", () => {

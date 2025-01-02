@@ -7,7 +7,7 @@ export function run_tests(){
     context("Desktop View", () => {
         beforeEach(() => {
             // Simuliere Desktop-Ansicht
-            cy.viewport(viewportSizes.desktop[0], viewportSizes.desktop[1]);
+            cy.viewport(viewportSizes.laptop_14[0], viewportSizes.laptop_14[1]);
             // Klick auf den Link zum Abschnitt in der Navigationsleiste
             cy.get('.navigation-elements a[href="#portfolio"]').click();
             // Überprüfen, ob der entsprechende Abschnitt sichtbar ist
