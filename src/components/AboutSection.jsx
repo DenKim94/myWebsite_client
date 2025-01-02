@@ -17,8 +17,8 @@ import TabsContainer from './TabsContainer.jsx';
 
 function AboutSection() {
     return ( 
-        <section id='about' className='about-section'>
-            <h1 id ='about-title'> Über mich </h1>
+        <section id="about" className="about-section">
+            <h1 id ="about-title"> Über mich </h1>
             <TabsContainer />
         </section>
         );

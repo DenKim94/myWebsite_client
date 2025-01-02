@@ -65,7 +65,7 @@ const CardInfos = () => {
                 </a>
             </h2>
             <div className="info-project-content" data-testid="info-project-content">
-                <ul id="info-project-description">
+                <ul id="info-project-description" data-testid="info-project-description">
                     {projInfo?.projectDescription.map((item, index) => (
                     <li key={index} style={{ whiteSpace: 'pre-line', textAlign: 'left' }}>
                        <strong>{item.split(':')[0]}</strong>: {item.split(':')[1]}
@@ -73,12 +73,12 @@ const CardInfos = () => {
                     ))}
                 </ul> 
                 
-            {projInfo?.projectDemo ? (   
-                <video className = "info-project-demo" width="90%" height="auto" controls controlsList="nodownload">
-                    <source src={projInfo.projectDemo} type="video/mp4"/>
-                    Ihr Browser unterstützt das Video-Tag nicht.
-                </video>
-            ): null}
+                {projInfo?.projectDemo ? (   
+                    <video className = "info-project-demo" width="90%" height="auto" controls controlsList="nodownload">
+                        <source src={projInfo.projectDemo} type="video/mp4"/>
+                        Ihr Browser unterstützt das Video-Tag nicht.
+                    </video>
+                ): null}
 
             </div>
             <Button
