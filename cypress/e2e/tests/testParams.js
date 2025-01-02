@@ -15,6 +15,7 @@ export const viewportSizes = {
 
 export const genericSettings = {
     clientURL: 'http://localhost:3000',
+    serverURL: 'http://localhost:3001',
 };
 
 export const animationDurations = {
@@ -26,9 +27,15 @@ export const animationDurations = {
 
 export const textContent = {
     INFO_TEXT_START_SECTION: globalConstants.INFO_TEXT_START_SECTION,
+    GENERAL_PROJECT_DESCRIPTION: globalConstants.GENERAL_PROJECT_DESCRIPTION,
 };
 
 export const paths = {
     sliderPhotoPath: globalConstants.fullPhotoPath_slider, 
 };
 
+export const projectCards = {
+    MAX_NUM_VISIBLE_CARDS: globalConstants.MAX_NUM_VISIBLE_CARDS,
+    PROJECT_CARDS_DATA: globalConstants.PROJECT_CARDS_DATA,
+};
+ 
