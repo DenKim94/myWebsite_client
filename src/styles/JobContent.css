@@ -122,7 +122,7 @@
         margin-bottom: 20px;
         text-align: center;
         justify-content: flex-start;
-        max-height: 350px;
+        max-height: 360px;
         min-width: calc(var(--minAppWidth)*0.6);
         max-width: calc(var(--maxWidthSections)*0.9);
         width: 92%;
