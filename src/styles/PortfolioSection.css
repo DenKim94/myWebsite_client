@@ -48,7 +48,7 @@
 /* Mobile view: tablet */
 @media(max-width: 1030px) and (max-height: 1370px){
     .project-cards-container{
-        height: calc(var(--minHeightProjectCard)*1.1*var(--numberVisibleProjectCards));
+        height: calc(var(--minHeightProjectCard)*1.15*var(--numberVisibleProjectCards));
     }
 
     .general-project-description{
@@ -59,7 +59,7 @@
 /* Mobile view: tablet (mini): */
 @media(max-width: 780px) and (max-height: 1050px){
     .project-cards-container{
-        min-height: calc(var(--minHeightProjectCard)*1.2*var(--numberVisibleProjectCards));
+        min-height: calc(var(--minHeightProjectCard)*1.1*var(--numberVisibleProjectCards));
         padding-top: 0;
         padding-bottom: 0;
     }
