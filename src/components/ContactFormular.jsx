@@ -52,10 +52,11 @@ import LoadingSpinnerPopup from './LoadingSpinnerPopup';
 
 const ContactFormular = () => {
     
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
     const SERVER_URL = import.meta.env.VITE_SERVER_URL || 'http://localhost:3001';
+    const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY
 
     const formData = useRef();
     const [captchaToken, setCaptchaToken] = useState(null);
@@ -100,8 +101,8 @@ const ContactFormular = () => {
 
             if(response.ok) {
                 emailjs
-                .sendForm(serviceId, templateId, formData.current, {
-                  publicKey: publicKey,
+                .sendForm(SERVICE_ID, TEMPLATE_ID, formData.current, {
+                  publicKey: PUBLIC_KEY,
                 })
                 .then(
                   () => {
@@ -163,7 +164,7 @@ const ContactFormular = () => {
                 </div>
                 {/* ReCaptcha */}
                 <ReCAPTCHA
-                    sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                    sitekey={RECAPTCHA_SITE_KEY}
                     data-testid="recaptcha"
                     onChange={(token) => setCaptchaToken(token)}
                     onExpired={() => setCaptchaToken(null)}
