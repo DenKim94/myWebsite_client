@@ -1,12 +1,5 @@
 // Globale Konstanten für die Webanwendung [ERFORDERLICH]
-// Update: 03.01.2025
-
-// Umgebungsvariablen für die Konfiguration von EmailJS und ReCAPTCHA
-export const SERVER_URL="https://mywebsite-server.onrender.com"
-export const EMAILJS_SERVICE_ID="service_xgbx4es"
-export const EMAILJS_TEMPLATE_ID="template_8a3rfyg"
-export const EMAILJS_PUBLIC_KEY="U-FrJzuK0L8lZVZIW"
-export const RECAPTCHA_SITE_KEY="6LefdJwqAAAAAD49esS8alnKeblgQFhXmLilGnzZ"
+// Update: 01.01.2025
 
 // Schwellenwerte für das responsive Design
 export const THRESHOLD_MAX_APP_WIDTH = 800;     

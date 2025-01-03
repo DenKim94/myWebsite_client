@@ -52,10 +52,10 @@ import LoadingSpinnerPopup from './LoadingSpinnerPopup';
 
 const ContactFormular = () => {
     
-    const serviceId = globalConstants.EMAILJS_SERVICE_ID;
-    const templateId = globalConstants.EMAILJS_TEMPLATE_ID;
-    const publicKey = globalConstants.EMAILJS_PUBLIC_KEY;
-    const SERVER_URL = globalConstants.SERVER_URL || 'http://localhost:3001';
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    const SERVER_URL = import.meta.env.VITE_SERVER_URL || 'http://localhost:3001';
 
     const formData = useRef();
     const [captchaToken, setCaptchaToken] = useState(null);
@@ -182,7 +182,7 @@ const ContactFormular = () => {
                     <label>
                         Ich stimme den{" "} 
                         <a 
-                        href="src/assets/datenschutz.html"
+                        href="/datenschutz.html"
                         target="_blank" 
                         rel="noopener noreferrer" 
                         style={{ color: 'black', textDecoration: 'underline'}}

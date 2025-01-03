@@ -26,7 +26,7 @@ function Footer() {
 
     return (
       <footer>
-        <a id='impressum' href="src/assets/impressum.html" target="_blank">Impressum</a>
+        <a id='impressum' href="/impressum.html" target="_blank">Impressum</a>
         <div className='social-media-icons'>
           { globalConstants.SOCIAL_MEDIA_ITEMS.map((item, index) => (
           <a href={item.url} target="_blank" rel="noopener noreferrer" key={index}>
