@@ -5,6 +5,7 @@
     min-width: var(--minAppWidth);
     position: fixed;
     min-height: var(--minHeightHeader);
+    height: var(--minHeightHeader);
     width: 100%;
     top: 0;
     left: 0;    
