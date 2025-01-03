@@ -285,5 +285,5 @@ export const SOCIAL_MEDIA_LOGO_PATHS = [
     `${PATH_TO_ICONS}LinkedIn_Icon.svg`,
 ];
 
-export const INFO_TEXT_CONTACT = `Don't be so shy! - Falls Du weitere Fragen hast oder eine Zusammenarbeit mit mir vorstellen kannst, schreibe mir gerne eine Nachricht.
+export const INFO_TEXT_CONTACT = `Don't be so shy! - Falls du weitere Fragen hast oder an einer Zusammenarbeit interessiert bist, schreibe mir gerne eine Nachricht.
 Ich freue mich auf den Austausch und vielen Dank für deinen Besuch!`;
