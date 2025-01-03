@@ -63,7 +63,7 @@ export const PROJECT_DESCRIPTION_ECA = [`Beschreibung: Tool zur Stromkostenanaly
 
 export const PROJECT_DESCRIPTION_WEBSITE= [`Beschreibung: 
     Eigene Webseite zur Vorstellung meiner Projekte und meines persönlichen sowie beruflichen Werdegangs.`, 
-    `Projektumfang: ca. 140 Stunden`, 
+    `Projektumfang: ca. 150 Stunden`, 
     `Kenntnisse: React; Vite; CSS; Responsive Design; NodeJS & ExpressJS; Cypress`];
 
 // URLs zu den Webseiten der Projekte
