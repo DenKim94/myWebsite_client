@@ -49,7 +49,7 @@ export const CARDINFO_ANIMATION_DURATION = 0.5; // Dauer der Animation in Sekund
 export const MAX_NUM_VISIBLE_CARDS = 3;
 
 export const PROJECT_NAME_STRATEGO = 'Stratego-Web';
-export const PROJECT_NAME_ECA = 'Enery Costs Analyzer'; 
+export const PROJECT_NAME_ECA = 'Energy Costs Analyzer'; 
 export const PROJECT_NAME_WEBSITE = 'Portfolio Webseite';
 
 // Texte für die spezifische Beschreibung der aufgelisteten Projekte
@@ -161,10 +161,10 @@ export const ICON_PATHS_PHOTO_SWITCHER = { left:`${PATH_TO_ICONS}arrowLeft_Icon.
 
 // Abschnitt Berufsweg
 export const INFO_TEXT_JOB_EXPERIENCE = `Nach dem Abschluss meines Studiums war ich zunächst als wissenschaftlicher Mitarbeiter in der Vorausberechnung von elektrischen Antrieben tätig.
-Dabei habe ich recht schnell mein Interesse an der Softwareentwicklung und Programmierung entdeckt. 
-Aus Interesse entwickelte sich ein Wunsch nach Veränderung. 
+Dabei entdeckte ich recht schnell mein Interesse an der Softwareentwicklung und Programmierung.
+Aus Interesse entwickelte sich der Wunsch nach Veränderung. 
 Daher entschied ich mich für einen Wechsel in die Industrie, wo ich nun seit über zwei Jahren erfolgreich als Softwareingenieur tätig bin.
-Aus Wunsch wurde Leidenschaft, der ich auch in meiner Freizeit nachgehe und mich mit eigenen Softwareprojekten nach dem Motto "Build. Reflect. Improve." zum Webentwickler weiterbilde.`;
+Aus diesem Wunsch wurde eine Leidenschaft, der ich auch in meiner Freizeit nachgehe und mich mit eigenen Softwareprojekten nach dem Motto "Build. Reflect. Improve." zum Webentwickler weiterbilde.`;
 
 
 export const JOB_EXPERIENCE_CONTENT = [
