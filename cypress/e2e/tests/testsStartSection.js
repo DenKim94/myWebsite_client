@@ -1,7 +1,7 @@
 import {genericSettings, viewportSizes, animationDurations, textContent, paths} from './testParams.js'
 
 /** Diese Hauptfunktion führt alle E2E-Tests für die Startseite aus.
- *  Datum: 02.01.2025
+ *  Datum: 03.01.2025
  * */ 
 export function run_tests(){
     context("Desktop View", () => {
@@ -79,7 +79,7 @@ export function run_tests(){
 // Testfunktionen
 function run_test_Typewriter(){
     it("Startseite: Begrüßungstext wird korrekt angezeigt", () => {
-        const animated_words = ["Denis.", "Webentwickler.", "Denis."]; // Die erwarteten Wörter
+        const animated_words = textContent.ANIMATED_WORDS; // Die erwarteten Wörter
 
         animated_words.forEach((word) => {
           // Überprüfe das Schreiben des Wortes

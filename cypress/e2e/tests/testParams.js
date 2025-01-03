@@ -28,6 +28,7 @@ export const animationDurations = {
 export const textContent = {
     INFO_TEXT_START_SECTION: globalConstants.INFO_TEXT_START_SECTION,
     GENERAL_PROJECT_DESCRIPTION: globalConstants.GENERAL_PROJECT_DESCRIPTION,
+    ANIMATED_WORDS: ["Denis.", "Softwareentwickler.", "Denis."],
 };
 
 export const paths = {
