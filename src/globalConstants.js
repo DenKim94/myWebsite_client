@@ -56,7 +56,7 @@ export const PROJECT_NAME_WEBSITE = 'Portfolio Webseite';
 export const PROJECT_DESCRIPTION_STRATEGO = [`Beschreibung: 
     Onlinespiel (Desktop), welches ursprünglich vom Brettspiel "Stratego" abgeleitet wurde.`, 
     `Projektumfang: ca. 400 Stunden`, 
-    `Kenntnisse: React; NodeJS & ExpressJS; Cypress; CSS`]; 
+    `Kenntnisse: React; NodeJS & ExpressJS; Cypress`]; 
 
 export const PROJECT_DESCRIPTION_ECA = [`Beschreibung: Tool zur Stromkostenanalyse`, 
     `Projektumfang: ca. 55 Stunden`, `Kenntnisse: Python; SQLite; CustomTkinter`];
@@ -64,7 +64,7 @@ export const PROJECT_DESCRIPTION_ECA = [`Beschreibung: Tool zur Stromkostenanaly
 export const PROJECT_DESCRIPTION_WEBSITE= [`Beschreibung: 
     Eigene Webseite zur Vorstellung meiner Projekte und meines persönlichen sowie beruflichen Werdegangs.`, 
     `Projektumfang: ca. 140 Stunden`, 
-    `Kenntnisse: React; HTML; CSS; Responsive Design; Cypress`];
+    `Kenntnisse: React; CSS; Responsive Design; NodeJS & ExpressJS; Cypress`];
 
 // URLs zu den Webseiten der Projekte
 export const PROJECT_URLS = {
@@ -263,7 +263,7 @@ unterstütze als studentische Hilfskraft in der Forschung oder war als Werkstude
 Rückblickend bin ich sehr dankbar für diese Erfahrungen, die mich geprägt und meinen Blick auf die Welt erweitert haben.
 Heute bin ich stolz darauf, mich Ingenieur nennen zu dürfen, der danach strebt den Alltag der Menschen mit zuverlässiger und intuitiver Software zu erleichtern. 
 Jeder Schritt, den ich gegangen bin, hat mich geformt und mich auf dieser spannenden Reise zu dem fleißigen, organisierten und zuverlässigen Menschen gemacht, der ich heute bin.
-Ich blicke optimistisch in die Zukunft, bereit, neue Herausforderungen anzunehmen und weiterhin zu wachsen.`;
+Ich blicke optimistisch in die Zukunft, bereit, neue Herausforderungen anzunehmen und daran zu wachsen.`;
 
 
 // Abschnitt Kontakt
