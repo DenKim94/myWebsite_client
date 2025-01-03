@@ -1,5 +1,12 @@
 // Globale Konstanten für die Webanwendung [ERFORDERLICH]
-// Update: 29.12.2024
+// Update: 03.01.2025
+
+// Umgebungsvariablen für die Konfiguration von EmailJS und ReCAPTCHA
+export const SERVER_URL="https://mywebsite-server.onrender.com"
+export const EMAILJS_SERVICE_ID="service_xgbx4es"
+export const EMAILJS_TEMPLATE_ID="template_8a3rfyg"
+export const EMAILJS_PUBLIC_KEY="U-FrJzuK0L8lZVZIW"
+export const RECAPTCHA_SITE_KEY="6LefdJwqAAAAAD49esS8alnKeblgQFhXmLilGnzZ"
 
 // Schwellenwerte für das responsive Design
 export const THRESHOLD_MAX_APP_WIDTH = 800;     
@@ -84,7 +91,7 @@ export const PATH_TO_PROJECT_IMAGES = {
 }
 
 // Pfade zu den Demos der Projekte
-const DEMO_PATH = 'src/assets/demos/';
+const DEMO_PATH = '/demos/';
 
 export const PATH_TO_PROJECT_DEMOS = {
     stratego: `${DEMO_PATH}strategoWeb_demo.mp4`,
@@ -119,7 +126,7 @@ export const PROJECT_CARDS_DATA = [
 
 
 // Pfade zu den Bildern für die Diashow (Photoslider)
-const PATH_TO_IMAGES = 'src/assets/images/';
+const PATH_TO_IMAGES = '/images/';
 const IMAGE_NAMES_SLIDER = ['IMG_1912.png', 'IMG_4461.png', 
                             'IMG_2716.png', 'IMG_2610.png',
                             'IMG_4481.png'];
@@ -147,7 +154,7 @@ export const fullPhotoPath_switcher = IMAGE_NAMES_SWITCHER.map((name) => `${PATH
 
 // Konstanten für TabsContainer in About-Section
 export const OBSERVER_THRESHOLD_TABS = 0.3;  // Relativer Schwellenwert (Anteil der sichtbaren Seite), um die Animation zu aktivieren
-const PATH_TO_ICONS = 'src/assets/icons/';
+const PATH_TO_ICONS = '/icons/';
 
 export const TAB_INFOS = [
     { label: 'Berufsweg', contentId: 1, icon: `${PATH_TO_ICONS}Work_Icon.svg`},
