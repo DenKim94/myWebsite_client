@@ -35,7 +35,7 @@ export const INFO_TEXT_START_SECTION = `Willkommen auf meiner Webseite!
 Hier wirst du meinen persönlichen und beruflichen Werdegang kennenlernen. 
 Zudem stelle ich dir meine Softwareprojekte vor, die ich bisher in meiner Freizeit erfolgreich bearbeitet habe.
 
-Für Feedback, Rückfragen oder Anfragen zu meinem Lebenslauf freue ich mich auf deine E-Mail.`;
+Für Feedback, Rückfragen oder Anfragen zu meinem Lebenslauf freue ich mich über eine E-Mail von dir.`;
 
 // Text für die allgemeine Beschreibung der Projektseite
 export const GENERAL_PROJECT_DESCRIPTION = `Im Rahmen meiner fachlichen und persönlichen Weiterbildung habe ich in meiner Freizeit eine Reihe von Webentwicklungsprojekten umgesetzt, 
@@ -286,4 +286,4 @@ export const SOCIAL_MEDIA_LOGO_PATHS = [
 ];
 
 export const INFO_TEXT_CONTACT = `Don't be so shy! - Falls Du weitere Fragen hast oder eine Zusammenarbeit mit mir vorstellen kannst, schreibe mir gerne eine Nachricht.
-Ich freue mich auf den Austausch mit Dir und vielen Dank für deinen Besuch!`;
+Ich freue mich auf den Austausch und vielen Dank für deinen Besuch!`;
