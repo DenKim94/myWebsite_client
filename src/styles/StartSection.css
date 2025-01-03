@@ -129,6 +129,7 @@
     .description-text{
         text-align: center;
         height: calc(var(--minHeightDescriptionText)*1.4); 
+        width: 98%;
         line-height: 1.06;
         margin-bottom: 30px;
         padding-right: 0;
