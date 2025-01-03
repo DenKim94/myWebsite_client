@@ -74,7 +74,7 @@ const CardInfos = () => {
                 </ul> 
                 
                 {projInfo?.projectDemo ? (   
-                    <video className = "info-project-demo" width="90%" height="auto" controls controlsList="nodownload">
+                    <video className = "info-project-demo" width="90%" height="auto" controls controlsList="nodownload" muted>
                         <source src={projInfo.projectDemo} type="video/mp4"/>
                         Ihr Browser unterstützt das Video-Tag nicht.
                     </video>
