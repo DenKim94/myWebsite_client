@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import './../styles/TabsContainer.css';
+import { debounce } from 'lodash'; 
 import { useSharedContext } from './../context/sharedStates';
 import EducationContent from './EducationContent.jsx'
 import JobExperienceContent from './JobExperienceContent.jsx'
@@ -48,14 +49,13 @@ const TabsContainer = () => {
     useEffect(() => {
         if (visibleCardInfo.isVisible === false) {
             const observer = new IntersectionObserver(
-                ([entry]) => {
-                    if (entry.isIntersecting && entry.intersectionRatio >= globalConstants.OBSERVER_THRESHOLD_TABS) {
-                        setIsVisible(true);  // Animation starten
-
+                debounce(([entry]) => { // Verzögerung des Zustandswechsels
+                    if (entry.isIntersecting && entry.intersectionRatio > globalConstants.OBSERVER_THRESHOLD_TABS) {
+                        setIsVisible(true);
                     } else {
-                        setIsVisible(false); // Animation zurücksetzen
+                        setIsVisible(false);
                     }
-                },
+                }, globalConstants.DEBOUNCE_TIMEDELAY_ms), 
                 { threshold: globalConstants.OBSERVER_THRESHOLD_TABS } 
             );
             const sliderElement = sliderRef.current;

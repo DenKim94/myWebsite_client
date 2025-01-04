@@ -146,7 +146,8 @@ export const fullPhotoPath_switcher = IMAGE_NAMES_SWITCHER.map((name) => `${PATH
 
 
 // Konstanten für TabsContainer in About-Section
-export const OBSERVER_THRESHOLD_TABS = 0.3;  // Relativer Schwellenwert (Anteil der sichtbaren Seite), um die Animation zu aktivieren
+export const DEBOUNCE_TIMEDELAY_ms = 500; // Verzögerung des Zustandswechsels in ms
+export const OBSERVER_THRESHOLD_TABS = 0.15;  // Relativer Schwellenwert (Anteil der sichtbaren Seite), um die Animation zu aktivieren
 const PATH_TO_ICONS = '/icons/';
 
 export const TAB_INFOS = [
