@@ -18,11 +18,6 @@ import * as globalConstants from './../globalConstants.js';
  */
 
 function Footer() {
-  console.log(globalConstants.SOCIAL_MEDIA_LOGO_PATHS)
-
-  globalConstants.SOCIAL_MEDIA_LOGO_PATHS.map((logoPath, index) => (
-    console.log(logoPath, index)
-  ))
 
     return (
       <footer>
