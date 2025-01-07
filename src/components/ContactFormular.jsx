@@ -52,12 +52,6 @@ import LoadingSpinnerPopup from './LoadingSpinnerPopup';
 
 const ContactFormular = () => {
     
-    const SERVICE_ID = "service_xgbx4es";
-    const TEMPLATE_ID = "template_8a3rfyg";
-    const PUBLIC_KEY = "U-FrJzuK0L8lZVZIW";
-    const SERVER_URL = "https://mywebsite-server.onrender.com";
-    const RECAPTCHA_SITE_KEY = "6LefdJwqAAAAAD49esS8alnKeblgQFhXmLilGnzZ";
-
     const formData = useRef();
     const [captchaToken, setCaptchaToken] = useState(null);
     const [popupMessage, setPopupMessage] = useState("");
@@ -91,7 +85,7 @@ const ContactFormular = () => {
         try{
             setIsLoading(true);
             const response = await Promise.race([
-                fetch(`${SERVER_URL}/api/validate-captcha`, {
+                fetch(`${globalConstants.SERVER_URL}/api/validate-captcha`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ captchaToken, userEmail}),
@@ -101,8 +95,8 @@ const ContactFormular = () => {
 
             if(response.ok) {
                 emailjs
-                .sendForm(SERVICE_ID, TEMPLATE_ID, formData.current, {
-                  publicKey: PUBLIC_KEY,
+                .sendForm(globalConstants.SERVICE_ID, globalConstants.TEMPLATE_ID, formData.current, {
+                  publicKey: globalConstants.PUBLIC_KEY,
                 })
                 .then(
                   () => {
@@ -164,7 +158,7 @@ const ContactFormular = () => {
                 </div>
                 {/* ReCaptcha */}
                 <ReCAPTCHA
-                    sitekey={RECAPTCHA_SITE_KEY}
+                    sitekey={globalConstants.RECAPTCHA_SITE_KEY}
                     data-testid="recaptcha"
                     onChange={(token) => setCaptchaToken(token)}
                     onExpired={() => setCaptchaToken(null)}
