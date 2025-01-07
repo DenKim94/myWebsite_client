@@ -44,7 +44,7 @@ function App() {
     // Intervall einrichten (in Millisekunden)
     const interval = setInterval(wakeUpServer, globalConstants.SERVER_WAKEUP_INTERVAL_min * 60 * 1000);
 
-    // Cleanup-Funktion, um das Intervall zu löschen, wenn die Komponente entladen wird
+    // Cleanup-Funktion, um das Intervall zu löschen, wenn die Komponente nicht mehr im DOM ist
     return () => clearInterval(interval);
   }, []);
 
