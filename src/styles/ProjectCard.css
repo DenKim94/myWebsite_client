@@ -7,7 +7,7 @@
     align-items: center;
     background-color: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(10px);
-    border: solid 2px white;
+    border: solid 2px #ccc;
     border-radius: var(--borderRadius);
     max-width: calc(var(--maxWidthSections)*0.9);
     max-height: var(--maxHeightProjectCard);
