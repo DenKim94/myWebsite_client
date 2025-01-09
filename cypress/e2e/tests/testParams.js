@@ -23,6 +23,7 @@ export const animationDurations = {
     TYPE_ANIMATION_DURATION_DELETE: globalConstants.TYPE_ANIMATION_DURATION_DELETE, // Löschgeschwindigkeit in ms; Wert aus globalConstants.js
     HOLD_ANIMATION_DURATION: globalConstants.HOLD_ANIMATION_DURATION,               // Pause zwischen den Wörtern in ms; Wert aus globalConstants.js 
     DURATION_IMAGE_ANIMATION: globalConstants.DURATION_IMAGE_ANIMATION,             // Zeitintervall für den Bildwechsel in ms; Wert aus globalConstants.js
+    DEBOUNCE_TIMEDELAY_ms: globalConstants.DEBOUNCE_TIMEDELAY_ms,
 };
 
 export const textContent = {
@@ -39,4 +40,6 @@ export const projectCards = {
     MAX_NUM_VISIBLE_CARDS: globalConstants.MAX_NUM_VISIBLE_CARDS,
     PROJECT_CARDS_DATA: globalConstants.PROJECT_CARDS_DATA,
 };
+
+export const tabInfos = globalConstants.TAB_INFOS;
  
