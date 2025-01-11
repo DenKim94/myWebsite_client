@@ -16,6 +16,7 @@ export const viewportSizes = {
 export const genericSettings = {
     clientURL: 'http://localhost:3000',
     serverURL: 'http://localhost:3001',
+    captchaURL:`${globalConstants.SERVER_URL}/api/validate-captcha`,
 };
 
 export const animationDurations = {
@@ -30,10 +31,13 @@ export const textContent = {
     INFO_TEXT_START_SECTION: globalConstants.INFO_TEXT_START_SECTION,
     GENERAL_PROJECT_DESCRIPTION: globalConstants.GENERAL_PROJECT_DESCRIPTION,
     ANIMATED_WORDS: ["Denis.", "Softwareentwickler.", "Denis."],
+    INFO_TEXT_PERSONAL: globalConstants.INFO_TEXT_PERSONAL,
+    INFO_TEXT_CONTACT: globalConstants.INFO_TEXT_CONTACT,
 };
 
 export const paths = {
     sliderPhotoPath: globalConstants.fullPhotoPath_slider, 
+    switcherPhotoPath: globalConstants.fullPhotoPath_switcher,
 };
 
 export const projectCards = {
@@ -42,4 +46,10 @@ export const projectCards = {
 };
 
 export const tabInfos = globalConstants.TAB_INFOS;
+export const contactFormInfos = {
+    testerName: "Tester007",
+    testerValidEmail: "tester007@example",
+    testerInvalidEmail: "blocked@example.com",    // Gleich wie in der .env-Datei (Server)
+    testerMessage: "Dies ist eine Testnachricht.",
+};
  

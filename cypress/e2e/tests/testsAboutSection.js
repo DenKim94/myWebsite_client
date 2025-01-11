@@ -2,7 +2,7 @@ import {tabInfos, viewportSizes, animationDurations, textContent, paths} from '.
 
 
 /** Diese Hauptfunktion führt alle E2E-Tests für den "Über mich" Abschnitt aus.
- *  Datum: 09.01.2025
+ *  Datum: 11.01.2025
  * */ 
 export function run_tests(){
     context("Desktop View", () => {
@@ -18,6 +18,7 @@ export function run_tests(){
 
         run_test_VisibleElements();
         run_test_ActiveComponent();
+        run_test_PhotoSwitcher();
     });
 
     context("Mobile View", () => {
@@ -36,6 +37,7 @@ export function run_tests(){
 
         run_test_VisibleElements();
         run_test_ActiveComponent();
+        run_test_PhotoSwitcher();
     });
 }
 
@@ -81,6 +83,42 @@ function run_test_ActiveComponent(){
                         throw new Error(`Ungültiger Tab-Index: ${index}`);
                 }
             });                
+        });
+    });
+};
+
+function run_test_PhotoSwitcher(){
+    const tabName = "Lebensweg";
+    const lastPhotoIndex = paths.switcherPhotoPath.length - 1;
+    const baseUrl = Cypress.config('baseUrl');
+
+    it("About-Seite: PhotoSwitcher zeigt nach dem Klick auf den jeweiligen Button korrekte Fotos an", () => {
+        // Klicke auf den Tab und öffne den entsprechenden Abschnitt
+        cy.get(`[data-testid="tabs"] button:contains("${tabName}")`).click();
+        // Prüfe, ob der PhotoSwitcher sichtbar ist
+        cy.get('[data-testid="switcher-container"]').should('exist').and('be.visible');
+        // Prüfe, ob die Beschreibung korrekt angezeigt wird
+        cy.get('[data-testid="personal-description"]').should('exist')
+        .and('be.visible').and('contain.text', textContent.INFO_TEXT_PERSONAL);
+
+        cy.get('[data-testid="switcher-container"]').within(() => {
+            // Prüfe, ob das erste Foto korrekt angezeigt wird
+            cy.get('.current-image').first().should('have.css', 'background-image')
+            .and('include', `url("${baseUrl}${paths.switcherPhotoPath[0]}")`);
+
+            // Nach rechts wechseln und prüfen, ob die nachfolgenden Fotos korrekt angezeigt werden
+            paths.switcherPhotoPath.forEach((photoPath, index) => {
+                cy.get('[data-testid="switcher-button-rigth"]').click();
+                const currentPhoto = cy.get('.current-image').eq(index);
+                currentPhoto.should('have.css', 'background-image')
+                .and('include', `url("${baseUrl}${photoPath}")`);
+            })
+
+            // Nach links wechseln und prüfen, ob das letzte Foto angezeigt wird
+            cy.get('[data-testid="switcher-button-left"]').click();
+            const currentPhoto = cy.get('.current-image').eq(lastPhotoIndex-1);
+            currentPhoto.should('have.css', 'background-image')
+            .and('include', `url("${baseUrl}${paths.switcherPhotoPath[lastPhotoIndex-1]}")`);
         });
     });
 };
