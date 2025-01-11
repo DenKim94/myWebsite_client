@@ -178,6 +178,7 @@ const ContactFormular = () => {
                         Ich stimme den{" "} 
                         <a 
                         href="/datenschutz.html"
+                        id='data-privacy-link'
                         target="_blank" 
                         rel="noopener noreferrer" 
                         style={{ color: 'black', textDecoration: 'underline'}}

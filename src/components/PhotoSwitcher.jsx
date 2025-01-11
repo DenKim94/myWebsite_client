@@ -50,14 +50,14 @@ const PhotoSwitcher = ({ fullPhotoPath, size_px = globalConstants.PHOTO_SIZE_DEF
                 </div>
             </div>
             <div className="button-container">
-                <button className="switcher-button" onClick={handlePrevious}>
+                <button className="switcher-button" data-testid="switcher-button-left" onClick={handlePrevious}>
                     <img
                         src={globalConstants.ICON_PATHS_PHOTO_SWITCHER.left}
                         alt={`Icon previous image`}
                         className="arrow-left"
                     />
                 </button>
-                <button className="switcher-button" onClick={handleNext}>
+                <button className="switcher-button" data-testid="switcher-button-rigth"onClick={handleNext}>
                     <img
                         src={globalConstants.ICON_PATHS_PHOTO_SWITCHER.right}
                         alt={`Icon next image`}
