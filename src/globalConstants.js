@@ -5,7 +5,7 @@
 export const SERVICE_ID = "service_xgbx4es";
 export const TEMPLATE_ID = "template_8a3rfyg";
 export const PUBLIC_KEY = "U-FrJzuK0L8lZVZIW";
-export const SERVER_URL = "https://mywebsite-server.onrender.com";
+export const SERVER_URL = "https://tunnel-portfolio.denis-kim.dev";
 export const RECAPTCHA_SITE_KEY = "6LefdJwqAAAAAD49esS8alnKeblgQFhXmLilGnzZ"; 
 export const SERVER_WAKEUP_INTERVAL_min = 4; // Intervallzeit (in Minuten) für Serveranfragen, um diesen aktiv zu halten
 
