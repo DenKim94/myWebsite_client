@@ -115,6 +115,12 @@
     }
 }
 
+/* Mobile view: tablet (mini): horozontal */
+@media(max-width: 1050px) and (max-height: 780px){
+    .job-content {
+        max-height: calc((90vh - var(--minHeightSectionsOffset, 50px))*0.9); 
+    }
+}
 
 /* Mobile view: smartphone */
 @media screen and (max-width: 440px) and (max-height: 940px){
@@ -171,6 +177,15 @@
         min-height: calc(var(--minHeightSections)*0.8); 
         justify-content: flex-start;
         align-items: flex-start;
+    }
+}
+
+/* Mobile view: Widescreen */
+@media(min-width: 2000px) and (max-height: 1200px){
+
+    .job-content {
+        min-height: calc(var(--minHeightSections)*0.5); 
+        max-height: calc((90vh - var(--minHeightSectionsOffset, 50px))*0.85); 
     }
 }
 

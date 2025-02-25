@@ -128,12 +128,19 @@
 @media(max-width: 1370px) and (max-height: 1030px){
     .tabs {
         gap: 15px; 
-        margin-bottom: 0;
+        margin-bottom: 0px;
         padding: 20px;
     }
 
     .tab {
         padding: 10px 15px;
+    }
+}
+
+/* Mobile view: tablet (mini): horozontal */
+@media(max-width: 1050px) and (max-height: 780px){
+    .tabs {
+        margin-bottom: 0px;
     }
 }
 
