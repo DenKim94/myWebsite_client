@@ -39,54 +39,92 @@
 }
 
 /* Mobile view: laptop */
-@media(max-width: 1930px) and (max-height: 1120px){
+@media(min-width: 1500px) and (min-height: 980px){
     .project-cards-container{
-        height: calc(var(--minHeightProjectCard)*1.1*var(--numberVisibleProjectCards));
+        min-height: var(--minHeightProjectCard);
+        max-height: calc(var(--minHeightProjectCard)*6);
+        height: calc(var(--minHeightProjectCard)*6);
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .general-project-description{
+        margin-bottom: 10px;
     }
 }
 
 /* Mobile view: tablet */
-@media(max-width: 1030px) and (max-height: 1370px){
+@media(max-width: 1030px) and (max-height: 1400px){
     .project-cards-container{
-        height: calc(var(--minHeightProjectCard)*1.15*var(--numberVisibleProjectCards));
+        min-height: var(--minHeightProjectCard);
+        max-height: calc(var(--minHeightProjectCard)*5);
+        height: calc(var(--minHeightProjectCard)*4.5);
     }
 
     .general-project-description{
         max-height: 320px;
+        margin-bottom: 5px;
+    }
+}
+
+/* Mobile view: Big tablet (horizontal) */
+@media(max-width: 1370px) and (max-height: 1030px){
+    .project-cards-container{
+        min-height: var(--minHeightProjectCard);
+        max-height: calc(var(--minHeightProjectCard)*5);
+        height: calc(var(--minHeightProjectCard)*4.5);
+    }
+
+    .general-project-description{
+        margin-bottom: 5px;
+    }
+}
+
+/* Mobile view: tablet (horizontal) */
+@media(max-width: 1200px) and (max-height: 900px){
+    .project-cards-container{
+        min-height: var(--minHeightProjectCard);
+        max-height: calc(var(--minHeightProjectCard)*5);
+        height: calc(var(--minHeightProjectCard)*3);
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .general-project-description{
+        margin-bottom: 0px;
     }
 }
 
 /* Mobile view: tablet (mini): */
 @media(max-width: 780px) and (max-height: 1050px){
     .project-cards-container{
-        min-height: calc(var(--minHeightProjectCard)*1.1*var(--numberVisibleProjectCards));
+        min-height: var(--minHeightProjectCard);
+        max-height: calc(var(--minHeightProjectCard)*4);
+        height: calc(var(--minHeightProjectCard)*3.5);
         padding-top: 0;
         padding-bottom: 0;
     }
 }
 
 /* Mobile view: tablet (mini): horozontal */
-@media(max-width: 1050px) and (max-height: 780px){
+@media(min-width: 1020px) and (max-height: 770px){
     .project-cards-container{
+        min-height: var(--minHeightProjectCard);
+        max-height: calc(var(--minHeightProjectCard)*4);
+        height: calc(var(--minHeightProjectCard)*2.5);
         padding-top: 0;
         padding-bottom: 0;
     }
 }
 
-/* Mobile view: tablet (horizontal) */
-@media(max-width: 1370px) and (max-height: 1030px){
-    .project-cards-container{
-        height: calc(var(--minHeightProjectCard)*var(--numberVisibleProjectCards));
-    }
-}
 
 /* Mobile view: smartphone */
 @media screen and (max-width: 440px) and (max-height: 940px){
     .project-cards-container{
         width: var(--minAppWidth);
-        height: calc(var(--minHeightCardContainer));
-        padding-top: 5px;
-        padding-bottom: 10px;
+        height: calc(var(--minHeightCardContainer)*1.5);
+        padding-top: 0px;
+        padding-bottom: 0px;
         gap: 5px;
     }
 
@@ -107,7 +145,7 @@
 /* Mobile view: smartphone (horizontal) */
 @media screen and (max-width: 940px) and (max-height: 440px){
     .project-cards-container{
-        height: calc(var(--minHeightCardContainer)*1.2);
+        height: calc(var(--minHeightCardContainer)*0.95);
     }
 
     .project-cards-container div{
@@ -121,9 +159,12 @@
 }
 
 /* Mobile view: smartphone (mini) */
-@media screen and (max-width: 380px) and (max-height: 680px){
+@media screen and (max-width: 380px) and (max-height: 780px){
     .project-cards-container{
-        min-height: calc(var(--minHeightCardContainer));
+        min-height: calc(var(--minHeightCardContainer)*0.5);
+        height: calc(var(--minHeightCardContainer)*0.85);
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     .project-cards-container div{
@@ -135,7 +176,7 @@
 /* Mobile view: smartphone (mini): horizontal */
 @media screen and (max-width: 780px) and (max-height: 380px){
     .project-cards-container{
-        min-height: calc(var(--minHeightCardContainer)*0.8);
+        min-height: calc(var(--minHeightCardContainer)*0.75);
     }
 
     .project-cards-container div{

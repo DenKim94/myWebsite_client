@@ -1,5 +1,5 @@
 // Globale Konstanten für die Webanwendung [ERFORDERLICH]
-// Update: 07.01.2025
+// Update: 17.10.2025
 
 // IDs und URLs für die Netzwerk- und Serviceanfragen
 export const SERVICE_ID = "service_xgbx4es";
@@ -59,36 +59,46 @@ export const MAX_NUM_VISIBLE_CARDS = 3;
 export const PROJECT_NAME_STRATEGO = 'Stratego-Web';
 export const PROJECT_NAME_ECA = 'Energy Costs Analyzer'; 
 export const PROJECT_NAME_WEBSITE = 'Portfolio Webseite';
+export const PROJECT_NAME_TRAVELBLOG = 'Reiseblog';
+
 
 // Texte für die spezifische Beschreibung der aufgelisteten Projekte
 export const PROJECT_DESCRIPTION_STRATEGO = [`Beschreibung: 
-    Onlinespiel (Desktop), welches ursprünglich vom Brettspiel "Stratego" abgeleitet wurde.`, 
+    Onlinespiel (für Desktopansicht), welches ursprünglich vom Brettspiel "Stratego" abgeleitet wurde.`, 
     `Projektumfang: ca. 400 Stunden`, 
-    `Kenntnisse: React; NodeJS & ExpressJS; Cypress`]; 
+    `Techstack: React; NodeJS; ExpressJS; Cypress`]; 
 
 export const PROJECT_DESCRIPTION_ECA = [`Beschreibung: Tool zur Stromkostenanalyse`, 
-    `Projektumfang: ca. 55 Stunden`, `Kenntnisse: Python; SQLite; CustomTkinter`];
+    `Projektumfang: ca. 55 Stunden`, 
+    `Techstack: Python; SQLite; CustomTkinter`];
 
 export const PROJECT_DESCRIPTION_WEBSITE= [`Beschreibung: 
     Eigene Webseite zur Vorstellung meiner Projekte und meines persönlichen sowie beruflichen Werdegangs.`, 
     `Projektumfang: ca. 150 Stunden`, 
-    `Kenntnisse: React; Vite; CSS; Responsive Design; NodeJS & ExpressJS; Cypress`];
+    `Techstack: React; Vite; CSS; NodeJS; Cypress`];
+
+export const PROJECT_DESCRIPTION_TRAVELBLOG = [`Beschreibung: 
+    Eine Reiseblogseite mit Content Management System (CMS) und E-Mail Service.`, 
+    `Projektumfang: ca. 190 Stunden`, 
+    `Techstack: React; Next.js; Typescript; SCSS; NodeJS; Strapi-CMS; SQLite`]; 
 
 // URLs zu den Webseiten der Projekte
 export const PROJECT_URLS = {
     stratego: 'https://stratego-web.netlify.app',
     eca: 'https://github.com/DenKim94/PRJ_ECA',
     website: 'https://github.com/DenKim94/myWebsite_client',
+    travelblog: 'https://www.reisen-mit-nadja.de'
 }
 
 // Pfade zu den Bildern für die Projekte (ProjectCard)
 const ICON_PATH = '/icons/';
-export const ICON_SIZE_PX = 90;
+export const ICON_SIZE_PX = 92;
 
 export const PATH_TO_PROJECT_IMAGES = {
     stratego: `${ICON_PATH}strategoLogo.png`,
     eca: `${ICON_PATH}ecaLogo.png`,
     website: `${ICON_PATH}myWebLogo.ico`,
+    travelblog: `${ICON_PATH}travelBlogLogo.png`
 }
 
 // Pfade zu den Demos der Projekte
@@ -97,7 +107,8 @@ const DEMO_PATH = '/demos/';
 export const PATH_TO_PROJECT_DEMOS = {
     stratego: `${DEMO_PATH}strategoWeb_demo.mp4`,
     eca: `${DEMO_PATH}eca_demo.mp4`,
-    website: null
+    website: null,
+    travelblog: null
 };
 
 // Array zum Rendern der Card-Komponenten     
@@ -109,12 +120,12 @@ export const PROJECT_CARDS_DATA = [
         projectImage: PATH_TO_PROJECT_IMAGES.stratego,
         projectDemo: PATH_TO_PROJECT_DEMOS.stratego
     },
-    {
-        projectName: PROJECT_NAME_ECA,
-        projectDescription: PROJECT_DESCRIPTION_ECA,
-        projectURL: PROJECT_URLS.eca,
-        projectImage: PATH_TO_PROJECT_IMAGES.eca,
-        projectDemo: PATH_TO_PROJECT_DEMOS.eca
+        {
+        projectName: PROJECT_NAME_TRAVELBLOG,
+        projectDescription: PROJECT_DESCRIPTION_TRAVELBLOG,
+        projectURL: PROJECT_URLS.travelblog,
+        projectImage: PATH_TO_PROJECT_IMAGES.travelblog,
+        projectDemo: PATH_TO_PROJECT_DEMOS.travelblog
     },
     {
         projectName: PROJECT_NAME_WEBSITE,
@@ -122,7 +133,14 @@ export const PROJECT_CARDS_DATA = [
         projectURL: PROJECT_URLS.website,
         projectImage: PATH_TO_PROJECT_IMAGES.website,
         projectDemo: PATH_TO_PROJECT_DEMOS.website
-    }    
+    },    
+    {
+        projectName: PROJECT_NAME_ECA,
+        projectDescription: PROJECT_DESCRIPTION_ECA,
+        projectURL: PROJECT_URLS.eca,
+        projectImage: PATH_TO_PROJECT_IMAGES.eca,
+        projectDemo: PATH_TO_PROJECT_DEMOS.eca
+    }, 
 ];    
 
 
