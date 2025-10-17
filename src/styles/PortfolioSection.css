@@ -85,7 +85,7 @@
     .project-cards-container{
         min-height: var(--minHeightProjectCard);
         max-height: calc(var(--minHeightProjectCard)*5);
-        height: calc(var(--minHeightProjectCard)*3);
+        height: calc(var(--minHeightProjectCard)*3.3);
         padding-top: 0;
         padding-bottom: 0;
     }
@@ -122,7 +122,7 @@
 @media screen and (max-width: 440px) and (max-height: 940px){
     .project-cards-container{
         width: var(--minAppWidth);
-        height: calc(var(--minHeightCardContainer)*1.5);
+        height: calc(var(--minHeightCardContainer)*0.98);
         padding-top: 0px;
         padding-bottom: 0px;
         gap: 5px;
@@ -162,7 +162,7 @@
 @media screen and (max-width: 380px) and (max-height: 780px){
     .project-cards-container{
         min-height: calc(var(--minHeightCardContainer)*0.5);
-        height: calc(var(--minHeightCardContainer)*0.85);
+        height: calc(var(--minHeightCardContainer)*0.7);
         padding-top: 10px;
         padding-bottom: 10px;
     }
