@@ -32,12 +32,14 @@ function Header() {
     const sidebar = document.querySelector('.sidebar-elements')
     if(sidebar){
       sidebar.classList.add('open');
+      document.body.style.overflow = 'hidden'; // Scrollen blockieren
     }
   }
   function hideSidebar(){
     const sidebar = document.querySelector('.sidebar-elements')
     if(sidebar){
       sidebar.classList.remove('open'); 
+      document.body.style.overflow = ''; // Scrollen wieder erlauben
     }
   }
 
@@ -48,6 +50,7 @@ function Header() {
       const headerHeight = document.querySelector('.fixed-header').clientHeight;
       section?.scrollIntoView({ block: 'start' });
       window.scrollTo({ top: section.offsetTop - headerHeight - globalConstants.SCROLL_VIEW_OFFSET, behavior: 'smooth' });
+      hideSidebar();
     }
     catch(error){
       console.error(error.message)
