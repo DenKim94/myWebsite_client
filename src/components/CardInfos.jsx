@@ -68,7 +68,7 @@ const CardInfos = () => {
                 <ul id="info-project-description" data-testid="info-project-description">
                     {projInfo?.projectDescription.map((item, index) => (
                     <li key={index} style={{ whiteSpace: 'pre-line', textAlign: 'left' }}>
-                       <strong>{item.split(':')[0]}</strong>: {item.split(':')[1]}
+                       <strong style={{ fontWeight: globalConstants.FONT_WEIGHT_DEFAULT }}>{item.split(':')[0].trim()}</strong>: {item.split(':')[1]?.trim()}
                     </li>
                     ))}
                 </ul> 

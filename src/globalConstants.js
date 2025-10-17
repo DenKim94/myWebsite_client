@@ -63,6 +63,8 @@ export const PROJECT_NAME_TRAVELBLOG = 'Reiseblog';
 
 
 // Texte für die spezifische Beschreibung der aufgelisteten Projekte
+export const FONT_WEIGHT_DEFAULT = 700;
+
 export const PROJECT_DESCRIPTION_STRATEGO = [`Beschreibung: 
     Onlinespiel (für Desktopansicht), welches ursprünglich vom Brettspiel "Stratego" abgeleitet wurde.`, 
     `Projektumfang: ca. 400 Stunden`, 
