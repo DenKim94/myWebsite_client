@@ -312,5 +312,5 @@ export const SOCIAL_MEDIA_LOGO_PATHS = [
     `${PATH_TO_ICONS}LinkedIn_Icon.svg`,
 ];
 
-export const INFO_TEXT_CONTACT = `Don't be so shy! - Für Fragen oder Feedback, schreibe mir gerne eine Nachricht.
+export const INFO_TEXT_CONTACT = `Don't be so shy! - Für Fragen oder Feedback schreibe mir gerne eine Nachricht.
 Ich freue mich auf den Austausch und vielen Dank für deinen Besuch!`;
