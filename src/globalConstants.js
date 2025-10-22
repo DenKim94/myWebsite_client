@@ -41,9 +41,7 @@ export const POPUP_TIMEOUT_ms = 3000;
 // Text in der Info-Box auf der Startseite
 export const INFO_TEXT_START_SECTION = `Willkommen auf meiner Webseite!
 Hier wirst du meinen persönlichen und beruflichen Werdegang kennenlernen. 
-Zudem stelle ich dir meine Softwareprojekte vor, die ich bisher in meiner Freizeit erfolgreich bearbeitet habe.
-
-Für Feedback, Rückfragen oder Anfragen zu meinem Lebenslauf freue ich mich über eine E-Mail von dir.`;
+Zudem stelle ich dir meine Softwareprojekte vor, die ich bisher in meiner Freizeit erfolgreich bearbeitet habe.`;
 
 // Text für die allgemeine Beschreibung der Projektseite
 export const GENERAL_PROJECT_DESCRIPTION = `Im Rahmen meiner fachlichen und persönlichen Weiterbildung habe ich in meiner Freizeit eine Reihe von Webentwicklungsprojekten umgesetzt, 
@@ -314,5 +312,5 @@ export const SOCIAL_MEDIA_LOGO_PATHS = [
     `${PATH_TO_ICONS}LinkedIn_Icon.svg`,
 ];
 
-export const INFO_TEXT_CONTACT = `Don't be so shy! - Falls du weitere Fragen hast oder an einer Zusammenarbeit interessiert bist, schreibe mir gerne eine Nachricht.
+export const INFO_TEXT_CONTACT = `Don't be so shy! - Für Fragen oder Feedback, schreibe mir gerne eine Nachricht.
 Ich freue mich auf den Austausch und vielen Dank für deinen Besuch!`;
