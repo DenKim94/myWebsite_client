@@ -128,10 +128,10 @@
     }
     .description-text{
         text-align: center;
-        height: calc(var(--minHeightDescriptionText)*1.4); 
+        height: calc(var(--minHeightDescriptionText)*1.1); 
         width: 98%;
         line-height: 1.06;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         padding-right: 0;
         margin-right: 0;
     }
@@ -149,7 +149,7 @@
 @media screen and (max-width: 380px) and (max-height: 780px){
     .description-text{
         text-align: center;
-        height: calc(var(--minHeightDescriptionText)*1.4); 
+        height: calc(var(--minHeightDescriptionText)*1.1); 
         line-height: 1.03;
         margin-bottom: 10px;
         padding-right: 0;
