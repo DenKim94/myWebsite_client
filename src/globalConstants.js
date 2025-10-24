@@ -190,7 +190,7 @@ export const ICON_PATHS_PHOTO_SWITCHER = { left:`${PATH_TO_ICONS}arrowLeft_Icon.
 export const INFO_TEXT_JOB_EXPERIENCE = `Nach dem Abschluss meines Studiums war ich zunächst als wissenschaftlicher Mitarbeiter in der Vorausberechnung von elektrischen Antrieben tätig.
 Dabei entdeckte ich recht schnell mein Interesse an der Softwareentwicklung und Programmierung.
 Aus Interesse entwickelte sich der Wunsch nach Veränderung. 
-Daher entschied ich mich für einen Wechsel in die Industrie, wo ich nun seit über zwei Jahren erfolgreich als Softwareingenieur tätig bin.
+Daher entschied ich mich für einen Wechsel in die Industrie, wo ich nun seit ca. drei Jahren erfolgreich als Softwareingenieur tätig bin.
 Aus diesem Wunsch wurde eine Leidenschaft, der ich auch in meiner Freizeit nachgehe und mich mit eigenen Softwareprojekten nach dem Motto "Build. Reflect. Improve." zum Webentwickler weiterbilde.`;
 
 
