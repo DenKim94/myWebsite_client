@@ -201,8 +201,8 @@ export const JOB_EXPERIENCE_CONTENT = [
         url: 'https://www.itk-engineering.de/unternehmen/',
         location: 'Braunschweig',
         timePeriod: '01/2023 - 12/2025',
-        duties: ['Modellbasierte Unit-Entwicklung mit SCADE oder SIMULINK', 
-                'Implementierung und Durchführung von Unit-Tests mit Groovy (SPOCK)',
+        duties: ['Modellbasierte Unit-Entwicklung mit SCADE Suite', 
+                'Implementierung und Durchführung von Unit- und Integrationstests mit Groovy (SPOCK)',
                 'Systemanalyse und Ableitung von Anforderungen']
     },
     {
