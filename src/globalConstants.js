@@ -79,7 +79,7 @@ export const PROJECT_DESCRIPTION_WEBSITE= [`Beschreibung:
 
 export const PROJECT_DESCRIPTION_TRAVELBLOG = [`Beschreibung: 
     Eine Reiseblogseite mit Content Management System (CMS) und E-Mail Service.`, 
-    `Projektumfang: ca. 190 Stunden`, 
+    `Projektumfang: ca. 200 Stunden`, 
     `Techstack: React; Next.js; Typescript; SCSS; NodeJS; Strapi-CMS; SQLite`]; 
 
 // URLs zu den Webseiten der Projekte
@@ -190,7 +190,7 @@ export const ICON_PATHS_PHOTO_SWITCHER = { left:`${PATH_TO_ICONS}arrowLeft_Icon.
 export const INFO_TEXT_JOB_EXPERIENCE = `Nach dem Abschluss meines Studiums war ich zunächst als wissenschaftlicher Mitarbeiter in der Vorausberechnung von elektrischen Antrieben tätig.
 Dabei entdeckte ich recht schnell mein Interesse an der Softwareentwicklung und Programmierung.
 Aus Interesse entwickelte sich der Wunsch nach Veränderung. 
-Daher entschied ich mich für einen Wechsel in die Industrie, wo ich nun seit ca. drei Jahren erfolgreich als Softwareingenieur tätig bin.
+Daher entschied ich mich für einen Wechsel in die Industrie, wo ich nun seit drei Jahren erfolgreich als Softwareingenieur tätig bin.
 Aus diesem Wunsch wurde eine Leidenschaft, der ich auch in meiner Freizeit nachgehe und mich mit eigenen Softwareprojekten nach dem Motto "Build. Reflect. Improve." zum Webentwickler weiterbilde.`;
 
 
@@ -200,11 +200,10 @@ export const JOB_EXPERIENCE_CONTENT = [
         company: 'ITK Engineering GmbH',
         url: 'https://www.itk-engineering.de/unternehmen/',
         location: 'Braunschweig',
-        timePeriod: 'Seit 01/2023',
+        timePeriod: '01/2023 - 12/2025',
         duties: ['Modellbasierte Unit-Entwicklung mit SCADE oder SIMULINK', 
                 'Implementierung und Durchführung von Unit-Tests mit Groovy (SPOCK)',
-                'Systemanalyse und Ableitung von Anforderungen',
-                'Toolentwicklung zur automatisierten Messdatenanalyse mit MATLAB']
+                'Systemanalyse und Ableitung von Anforderungen']
     },
     {
         jobTitle: 'Wissenschaftlicher Mitarbeiter',
