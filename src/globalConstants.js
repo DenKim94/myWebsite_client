@@ -79,8 +79,8 @@ export const PROJECT_DESCRIPTION_WEBSITE= [`Beschreibung:
 
 export const PROJECT_DESCRIPTION_TRAVELBLOG = [`Beschreibung: 
     Eine Reiseblogseite mit Content Management System (CMS) und E-Mail Service.`, 
-    `Projektumfang: ca. 200 Stunden`, 
-    `Techstack: React; Next.js; Typescript; SCSS; NodeJS; Strapi-CMS; SQLite`]; 
+    `Projektumfang: ca. 220 Stunden`, 
+    `Techstack: React; Next.js; TypeScript; SCSS; NodeJS; Strapi-CMS; Playwright`]; 
 
 // URLs zu den Webseiten der Projekte
 export const PROJECT_URLS = {
