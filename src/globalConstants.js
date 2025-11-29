@@ -87,7 +87,7 @@ export const PROJECT_URLS = {
     stratego: 'https://stratego-web.netlify.app',
     eca: 'https://github.com/DenKim94/PRJ_ECA',
     website: 'https://github.com/DenKim94/myWebsite_client',
-    travelblog: 'https://www.reisen-mit-nadja.de'
+    travelblog: 'https://travel-blog-ten-iota.vercel.app'  
 }
 
 // Pfade zu den Bildern für die Projekte (ProjectCard)
